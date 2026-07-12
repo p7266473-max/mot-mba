@@ -234,6 +234,7 @@ def generate_questions_api(api_key, context, num_questions, session_title):
             raise Exception(f"Failed to generate questions. Please verify your Gemini API key: {e}")
 
 # Sidebar configurations
+api_key_input = None
 with st.sidebar:
     st.markdown("### 📋 Course Overview")
     st.markdown("""
@@ -244,7 +245,10 @@ with st.sidebar:
     
     st.markdown("---")
     st.markdown("### 🔑 BYOK API Configurations")
-    api_key_input = st.text_input("Gemini API Key:", type="password", help="Enter your Gemini API key to access the AI Dynamic Practice Quiz generators.")
+    if "GEMINI_API_KEY" in st.secrets:
+        st.success("🔒 Secure API Key loaded from Streamlit Secrets.")
+    else:
+        api_key_input = st.text_input("Gemini API Key:", type="password", help="Enter your Gemini API key to activate the AI Dynamic Practice Quiz generators.")
     
     st.markdown("---")
     st.markdown("### 🧭 Interactive Widgets")
@@ -259,9 +263,18 @@ with st.sidebar:
     st.progress(progress / 100)
     st.caption(f"{progress}% of total syllabus covered")
 
+# Securely fetch API key from st.secrets or user input
+api_key = None
+if "GEMINI_API_KEY" in st.secrets:
+    api_key = st.secrets["GEMINI_API_KEY"]
+if api_key_input:
+    api_key = api_key_input
+
 # Main Application Title
 st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle-text">Curriculum Portal & AI Practice Sandbox</div>', unsafe_allow_html=True)
+
+
 
 # 7 Session Tabs
 tab_titles = [
@@ -372,7 +385,7 @@ def render_ai_generator(session_index, session_title):
     st.markdown("#### 🤖 AI Dynamic Practice Test Generator")
     st.write("Construct customized practice tests using slide context dynamically fed to Google Gemini.")
     
-    if not api_key_input:
+    if not api_key:
         st.warning("🔑 Please enter your Gemini API Key in the sidebar to activate the AI Generator.")
         return
         
@@ -386,7 +399,8 @@ def render_ai_generator(session_index, session_title):
         with st.spinner("Gemini is analyzing slide blueprints and compiling questions..."):
             try:
                 slide_context = load_slides_context(session_index)
-                raw_json = generate_questions_api(api_key_input, slide_context, num_q, session_title)
+                raw_json = generate_questions_api(api_key, slide_context, num_q, session_title)
+
                 
                 # Parse output
                 parsed_questions = json.loads(raw_json)
