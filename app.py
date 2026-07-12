@@ -249,13 +249,12 @@ with st.sidebar:
         st.success("🔒 Secure API Key loaded from Streamlit Secrets.")
     else:
         api_key_input = st.text_input("Gemini API Key:", type="password", help="Enter your Gemini API key to activate the AI Dynamic Practice Quiz generators.")
-    
+        
     st.markdown("---")
-    st.markdown("### 🧭 Interactive Widgets")
-    track_select = st.selectbox(
-        "Current Student Track Mode:",
-        ["👔 MBA Executive Focus", "🖥️ BSc Computer Science / IT Mode", "📊 BSc Accounts Mode"]
-    )
+    st.markdown("### 🧭 Portal Focus")
+    st.info("🎓 **MBA - COM 573**\n\nManagement of Technology\n\n*Binary University*")
+
+
     
     st.markdown("---")
     st.markdown("### 📈 Course Progress")
