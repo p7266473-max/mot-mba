@@ -208,7 +208,8 @@ def load_slides_context(session_index):
     except Exception:
         return "Management of Technology syllabus parameters."
 
-# Gemini API Generator helper
+# Gemini API Generator helper (cached to avoid redundant calls on rerun)
+@st.cache_data(show_spinner=False)
 def generate_questions_api(api_key, context, num_questions, session_title):
     prompt = f"""
     Generate exactly {num_questions} multiple-choice questions for the MBA Management of Technology class session: "{session_title}".
@@ -255,7 +256,6 @@ def generate_questions_api(api_key, context, num_questions, session_title):
             raise Exception(f"Failed to generate questions. Please verify your Gemini API key: {e}")
 
 # Sidebar configurations
-api_key_input = None
 with st.sidebar:
     st.markdown("### 📋 Course Overview")
     st.markdown("""
@@ -269,13 +269,17 @@ with st.sidebar:
     if "GEMINI_API_KEY" in st.secrets:
         st.success("🔒 Secure API Key loaded from Streamlit Secrets.")
     else:
-        api_key_input = st.text_input("Gemini API Key:", type="password", help="Enter your Gemini API key to activate the AI Dynamic Practice Quiz generators.")
+        # Wrap in form to prevent execution reruns on every keypress
+        with st.form("api_key_form"):
+            api_key_input = st.text_input("Gemini API Key:", type="password", help="Enter your Gemini API key to activate the AI Dynamic Practice Quiz generators.")
+            submitted = st.form_submit_button("Save Key")
+            if submitted:
+                st.session_state["GEMINI_API_KEY"] = api_key_input
+                st.success("API Key saved!")
         
     st.markdown("---")
     st.markdown("### 🧭 Portal Focus")
     st.info("🎓 **MBA - COM 573**\n\nManagement of Technology\n\n*Binary University*")
-
-
     
     st.markdown("---")
     st.markdown("### 📈 Course Progress")
@@ -283,12 +287,13 @@ with st.sidebar:
     st.progress(progress / 100)
     st.caption(f"{progress}% of total syllabus covered")
 
-# Securely fetch API key from st.secrets or user input
+# Securely fetch API key from st.secrets or st.session_state user input
 api_key = None
 if "GEMINI_API_KEY" in st.secrets:
     api_key = st.secrets["GEMINI_API_KEY"]
-if api_key_input:
-    api_key = api_key_input
+elif "GEMINI_API_KEY" in st.session_state:
+    api_key = st.session_state["GEMINI_API_KEY"]
+
 
 # Main Application Title
 st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>', unsafe_allow_html=True)
