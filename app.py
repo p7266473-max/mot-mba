@@ -1,18 +1,18 @@
 import streamlit as st
-from utils import inject_custom_css
-from pages_layout import (
-    render_session_1,
-    render_session_2,
-    render_session_3,
-    render_session_4,
-    render_session_5,
-    render_session_6,
-    render_session_7,
+from utils import inject_custom_css, render_quiz
+from data_store import (
+    SESSION_1_QUIZ,
+    SESSION_2_QUIZ,
+    SESSION_3_QUIZ,
+    SESSION_4_QUIZ,
+    SESSION_5_QUIZ,
+    SESSION_6_QUIZ,
+    SESSION_7_QUIZ,
 )
 
 # Page configuration
 st.set_page_config(
-    page_title="MOT MBA Lesson Plan & Interactive Portal",
+    page_title="MOT MBA Practice Quizzes",
     page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -42,45 +42,37 @@ with st.sidebar:
 
 # Main Application Title
 st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle-text">Curriculum Portal & Interactive Sandbox</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle-text">Practice Quizzes</div>', unsafe_allow_html=True)
 
-# 7 Session Tabs
+# 7 Session Tabs renamed to Weeks
 tab_titles = [
-    "Session 1: Weeks 1 & 2",
-    "Session 2: Weeks 3 & 4",
-    "Session 3: Weeks 5 & 6",
-    "Session 4: Weeks 7 & 8",
-    "Session 5: Weeks 9 & 10",
-    "Session 6: Weeks 11 & 12",
-    "Session 7: Week 13"
+    "Weeks 1 & 2",
+    "Weeks 3 & 4",
+    "Weeks 5 & 6",
+    "Weeks 7 & 8",
+    "Weeks 9 & 10",
+    "Weeks 11 & 12",
+    "Week 13"
 ]
 tabs = st.tabs(tab_titles)
 
-# Render each tab using modular page functions
 with tabs[0]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
-    render_session_1(sub_tabs)
+    render_quiz("Weeks 1 & 2", SESSION_1_QUIZ)
 
 with tabs[1]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
-    render_session_2(sub_tabs)
+    render_quiz("Weeks 3 & 4", SESSION_2_QUIZ)
 
 with tabs[2]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
-    render_session_3(sub_tabs)
+    render_quiz("Weeks 5 & 6", SESSION_3_QUIZ)
 
 with tabs[3]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
-    render_session_4(sub_tabs)
+    render_quiz("Weeks 7 & 8", SESSION_4_QUIZ)
 
 with tabs[4]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
-    render_session_5(sub_tabs)
+    render_quiz("Weeks 9 & 10", SESSION_5_QUIZ)
 
 with tabs[5]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
-    render_session_6(sub_tabs)
+    render_quiz("Weeks 11 & 12", SESSION_6_QUIZ)
 
 with tabs[6]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
-    render_session_7(sub_tabs)
+    render_quiz("Week 13", SESSION_7_QUIZ)
