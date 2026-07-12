@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import hashlib
+import json
+import os
 
 # Page configuration
 st.set_page_config(
@@ -86,9 +88,13 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Initialize Session State for Quizzes
+# Initialize Session States
 if "quiz_states" not in st.session_state:
     st.session_state.quiz_states = {}
+if "dynamic_quizzes" not in st.session_state:
+    st.session_state.dynamic_quizzes = {}
+if "dynamic_quiz_states" not in st.session_state:
+    st.session_state.dynamic_quiz_states = {}
 
 def get_quiz_state(session_key, q_count):
     if session_key not in st.session_state.quiz_states:
@@ -99,19 +105,146 @@ def get_quiz_state(session_key, q_count):
         }
     return st.session_state.quiz_states[session_key]
 
-# Main Application Header
-st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle-text">Interactive Lesson Plan Portal — MBA Curriculum Integration</div>', unsafe_allow_html=True)
+def get_dynamic_quiz_state(session_key, q_count):
+    state_key = f"dyn_{session_key}"
+    if state_key not in st.session_state.dynamic_quiz_states:
+        st.session_state.dynamic_quiz_states[state_key] = {
+            "answers": [None] * q_count,
+            "submitted": False,
+            "mode": "Study Mode"
+        }
+    return st.session_state.dynamic_quiz_states[state_key]
 
-# Sidebar with general info
+# Slide Context Parser
+def load_slides_context(session_index):
+    try:
+        filepath = os.path.join(os.path.dirname(__file__), "extracted_slides.txt")
+        if not os.path.exists(filepath):
+            return "Management of Technology curriculum syllabus context."
+            
+        with open(filepath, "r") as f:
+            content = f.read()
+            
+        parts = content.split("========================================")
+        clean_parts = [p.strip() for p in parts if p.strip()]
+        
+        if session_index == 0:
+            w1_part = clean_parts[0] if len(clean_parts) > 0 else ""
+            lines = w1_part.split("\n")
+            w1_lines = []
+            for line in lines:
+                if "--- Slide 19 ---" in line:
+                    break
+                w1_lines.append(line)
+            return "\n".join(w1_lines)
+            
+        elif session_index == 1:
+            w1_part = clean_parts[0] if len(clean_parts) > 0 else ""
+            lines = w1_part.split("\n")
+            w2_lines = []
+            capture = False
+            for line in lines:
+                if "--- Slide 19 ---" in line:
+                    capture = True
+                if "--- Slide 28 ---" in line:
+                    break
+                if capture:
+                    w2_lines.append(line)
+            return "\n".join(w2_lines)
+            
+        elif session_index == 2:
+            return clean_parts[2] if len(clean_parts) > 2 else ""
+            
+        elif session_index == 3:
+            return clean_parts[3] if len(clean_parts) > 3 else ""
+            
+        elif session_index == 4:
+            return "Application Portfolio Management, software lifecycle, maintenance vs enhancement, programming backlog prioritization, cost of change, strategic business case reviews."
+            
+        elif session_index == 5:
+            w5_part = clean_parts[4] if len(clean_parts) > 4 else ""
+            lines = w5_part.split("\n")
+            w6_lines = []
+            for line in lines:
+                if "TOPIC 8" in line:
+                    break
+                w6_lines.append(line)
+            return "\n".join(w6_lines)
+            
+        elif session_index == 6:
+            w5_part = clean_parts[4] if len(clean_parts) > 4 else ""
+            lines = w5_part.split("\n")
+            w7_lines = []
+            capture = False
+            for line in lines:
+                if "TOPIC 8" in line:
+                    capture = True
+                if capture:
+                    w7_lines.append(line)
+            return "\n".join(w7_lines)
+            
+        return "Generic MOT MBA Lecture Context."
+    except Exception:
+        return "Management of Technology syllabus parameters."
+
+# Gemini API Generator helper
+def generate_questions_api(api_key, context, num_questions, session_title):
+    prompt = f"""
+    Generate exactly {num_questions} multiple-choice questions for the MBA Management of Technology class session: "{session_title}".
+    Use the following verified slide syllabus context:
+    ---
+    {context}
+    ---
+    Requirements:
+    1. Base the questions strictly on the slide content. Do not make up external facts.
+    2. Format the response as a single valid JSON array. Each element should be an object with:
+       - "text": The question string
+       - "options": An array of 3-4 options
+       - "correct": The correct option (must match one string in the options list exactly)
+       - "explanation": Detailed explanation referencing slide guidelines
+    3. Output raw JSON ONLY. Do not wrap in ```json code tags.
+    """
+    
+    # Try google-genai SDK first
+    try:
+        from google import genai
+        from google.genai import types
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                temperature=0.3
+            )
+        )
+        return response.text
+    except Exception:
+        # Fallback to google-generativeai
+        try:
+            import google.generativeai as genai
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel('gemini-1.5-flash')
+            response = model.generate_content(
+                prompt,
+                generation_config={"response_mime_type": "application/json", "temperature": 0.3}
+            )
+            return response.text
+        except Exception as e:
+            raise Exception(f"Failed to generate questions. Please verify your Gemini API key: {e}")
+
+# Sidebar configurations
 with st.sidebar:
     st.markdown("### 📋 Course Overview")
     st.markdown("""
     **Track:** MBA (Business Administration)  
     **Course:** Management of Technology (MOT)  
     **Lecturer:** Mr. Irfan  
-    **Framework:** Post-War Kingdom Case Study  
     """)
+    
+    st.markdown("---")
+    st.markdown("### 🔑 BYOK API Configurations")
+    api_key_input = st.text_input("Gemini API Key:", type="password", help="Enter your Gemini API key to access the AI Dynamic Practice Quiz generators.")
     
     st.markdown("---")
     st.markdown("### 🧭 Interactive Widgets")
@@ -126,7 +259,11 @@ with st.sidebar:
     st.progress(progress / 100)
     st.caption(f"{progress}% of total syllabus covered")
 
-# 7 Tabs matching combined Weeks
+# Main Application Title
+st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle-text">Curriculum Portal & AI Practice Sandbox</div>', unsafe_allow_html=True)
+
+# 7 Session Tabs
 tab_titles = [
     "Session 1: Weeks 1 & 2",
     "Session 2: Weeks 3 & 4",
@@ -136,19 +273,27 @@ tab_titles = [
     "Session 6: Weeks 11 & 12",
     "Session 7: Week 13"
 ]
-
 tabs = st.tabs(tab_titles)
 
 # ─── QUIZ ENGINE RENDERER ───
-def render_quiz(session_key, questions):
-    q_state = get_quiz_state(session_key, len(questions))
-    
+def render_quiz(session_key, questions, is_dynamic=False):
+    if is_dynamic:
+        q_state = get_dynamic_quiz_state(session_key, len(questions))
+        state_answers_key = f"dyn_ans_{session_key}"
+        state_mode_key = f"dyn_mode_{session_key}"
+        state_sub_key = f"dyn_sub_{session_key}"
+    else:
+        q_state = get_quiz_state(session_key, len(questions))
+        state_answers_key = f"ans_{session_key}"
+        state_mode_key = f"mode_{session_key}"
+        state_sub_key = f"sub_{session_key}"
+        
     col_ctrl, col_info = st.columns([2, 3])
     with col_ctrl:
         q_state["mode"] = st.radio(
-            f"Select Quiz Mode for {session_key}:",
+            f"Select Quiz Mode:",
             ["Study Mode (Instant Feedback & Reveal)", "Exam Mode (Submit to Score)"],
-            key=f"mode_select_{session_key}"
+            key=state_mode_key
         )
     with col_info:
         st.info("💡 **Study Mode:** Select options to see correct/incorrect alerts instantly, with options to reveal explanation tabs. \n\n🔒 **Exam Mode:** Answer all questions fully and click 'Submit Quiz' at the bottom to calculate your final grade.")
@@ -166,7 +311,7 @@ def render_quiz(session_key, questions):
             "Select one of the options:",
             q["options"],
             index=q["options"].index(prev_ans) if prev_ans in q["options"] else None,
-            key=f"q_{session_key}_{idx}",
+            key=f"{state_answers_key}_{idx}",
             label_visibility="collapsed"
         )
         
@@ -183,7 +328,6 @@ def render_quiz(session_key, questions):
             else:
                 st.error(f"❌ **Incorrect.** The correct answer is: **{q['correct']}**")
             
-            # Sub-tabs for Explanation and Answer as requested
             exp_tabs = st.tabs(["💡 Reveal Explanation", "🔑 Correct Answer"])
             with exp_tabs[0]:
                 st.write(q["explanation"])
@@ -194,7 +338,7 @@ def render_quiz(session_key, questions):
         
     if q_state["mode"] == "Exam Mode (Submit to Score)":
         if not q_state["submitted"]:
-            if st.button("Submit Quiz", key=f"submit_{session_key}"):
+            if st.button("Submit Quiz", key=state_sub_key):
                 q_state["submitted"] = True
                 st.rerun()
         else:
@@ -207,7 +351,7 @@ def render_quiz(session_key, questions):
             else:
                 st.error("❌ Need revision. Check the study slide summary logs above.")
                 
-            if st.button("Retake Quiz", key=f"retake_{session_key}"):
+            if st.button("Retake Quiz", key=f"retake_{state_sub_key}"):
                 q_state["submitted"] = False
                 q_state["answers"] = [None] * len(questions)
                 st.rerun()
@@ -223,12 +367,53 @@ def render_quiz(session_key, questions):
                 with st.expander(f"See Q{idx+1} Explanation", expanded=False):
                     st.write(q["explanation"])
 
+# ─── DYNAMIC AI GENERATOR INTERFACE RENDERER ───
+def render_ai_generator(session_index, session_title):
+    st.markdown("#### 🤖 AI Dynamic Practice Test Generator")
+    st.write("Construct customized practice tests using slide context dynamically fed to Google Gemini.")
+    
+    if not api_key_input:
+        st.warning("🔑 Please enter your Gemini API Key in the sidebar to activate the AI Generator.")
+        return
+        
+    num_q = st.number_input("Number of questions to generate (e.g. 5, 10, 30):", min_value=1, max_value=50, value=5, key=f"num_q_{session_index}")
+    
+    generate_btn = st.button("🌀 Generate Custom Quiz with Gemini", key=f"gen_btn_{session_index}")
+    
+    state_quiz_key = f"quiz_{session_index}"
+    
+    if generate_btn:
+        with st.spinner("Gemini is analyzing slide blueprints and compiling questions..."):
+            try:
+                slide_context = load_slides_context(session_index)
+                raw_json = generate_questions_api(api_key_input, slide_context, num_q, session_title)
+                
+                # Parse output
+                parsed_questions = json.loads(raw_json)
+                st.session_state.dynamic_quizzes[state_quiz_key] = parsed_questions
+                
+                # Clear previous answers
+                state_key = f"dyn_{state_quiz_key}"
+                st.session_state.dynamic_quiz_states[state_key] = {
+                    "answers": [None] * len(parsed_questions),
+                    "submitted": False,
+                    "mode": "Study Mode"
+                }
+                
+                st.success(f"Successfully generated {len(parsed_questions)} practice questions!")
+            except Exception as e:
+                st.error(f"Error generating quiz: {e}")
+                
+    # Display the quiz if it exists in state
+    if state_quiz_key in st.session_state.dynamic_quizzes:
+        st.markdown("### 📝 AI Generated Practice Test")
+        render_quiz(state_quiz_key, st.session_state.dynamic_quizzes[state_quiz_key], is_dynamic=True)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # TAB 1: WEEK 1 & WEEK 2 (SYSTEMS THINKING & REQUIREMENTS)
 # ─────────────────────────────────────────────────────────────────────────────
 with tabs[0]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
+    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Standard Practice Quiz", "🤖 AI Dynamic Quiz"])
     
     with sub_tabs[0]:
         st.markdown('<div class="interactive-header"><h3>⚡ Systems Perspective & Requirement Engineering</h3></div>', unsafe_allow_html=True)
@@ -382,11 +567,14 @@ with tabs[0]:
         ]
         render_quiz("Session 1", w1_questions)
 
+    with sub_tabs[2]:
+        render_ai_generator(0, "Session 1: Weeks 1 & 2 Systems Thinking & Requirements")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # TAB 2: WEEK 3 & WEEK 4 (SYSTEM DESIGN & ETHICS)
 # ─────────────────────────────────────────────────────────────────────────────
 with tabs[1]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
+    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Standard Practice Quiz", "🤖 AI Dynamic Quiz"])
     
     with sub_tabs[0]:
         st.markdown('<div class="interactive-header"><h3>⚡ Business Systems Design & Ethical Governance</h3></div>', unsafe_allow_html=True)
@@ -507,11 +695,14 @@ with tabs[1]:
         ]
         render_quiz("Session 2", w3_questions)
 
+    with sub_tabs[2]:
+        render_ai_generator(1, "Session 2: Weeks 3 & 4 System Design & Ethics")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # TAB 3: WEEK 5 & WEEK 6 (SDLC & EXECUTION)
 # ─────────────────────────────────────────────────────────────────────────────
 with tabs[2]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
+    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Standard Practice Quiz", "🤖 AI Dynamic Quiz"])
     
     with sub_tabs[0]:
         st.markdown('<div class="interactive-header"><h3>⚡ Systems Development Life Cycle (SDLC) & Execution</h3></div>', unsafe_allow_html=True)
@@ -618,11 +809,14 @@ with tabs[2]:
         ]
         render_quiz("Session 3", w5_questions)
 
+    with sub_tabs[2]:
+        render_ai_generator(2, "Session 3: Weeks 5 & 6 SDLC Models & Execution")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # TAB 4: WEEK 7 & WEEK 8 (HARDWARE & SEMICONDUCTORS)
 # ─────────────────────────────────────────────────────────────────────────────
 with tabs[3]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
+    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Standard Practice Quiz", "🤖 AI Dynamic Quiz"])
     
     with sub_tabs[0]:
         st.markdown('<div class="interactive-header"><h3>⚡ Semiconductors, Digital Stack & Platforms</h3></div>', unsafe_allow_html=True)
@@ -721,11 +915,14 @@ with tabs[3]:
         ]
         render_quiz("Session 4", w8_questions)
 
+    with sub_tabs[2]:
+        render_ai_generator(3, "Session 4: Weeks 7 & 8 Semiconductors, Platforms & Cloud Stack")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # TAB 5: WEEK 9 & WEEK 10 (PORTFOLIO GOVERNANCE)
 # ─────────────────────────────────────────────────────────────────────────────
 with tabs[4]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
+    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Standard Practice Quiz", "🤖 AI Dynamic Quiz"])
     
     with sub_tabs[0]:
         st.markdown('<div class="interactive-header"><h3>⚡ Application Portfolio Management (APM) & Backlogs</h3></div>', unsafe_allow_html=True)
@@ -793,11 +990,14 @@ with tabs[4]:
         ]
         render_quiz("Session 5", w9_questions)
 
+    with sub_tabs[2]:
+        render_ai_generator(4, "Session 5: Weeks 9 & 10 Application Portfolios & Governance")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # TAB 6: WEEK 11 & WEEK 12 (ACQUISITION & E-BUSINESS)
 # ─────────────────────────────────────────────────────────────────────────────
 with tabs[5]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
+    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Standard Practice Quiz", "🤖 AI Dynamic Quiz"])
     
     with sub_tabs[0]:
         st.markdown('<div class="interactive-header"><h3>⚡ System Acquisition & E-Business Systems</h3></div>', unsafe_allow_html=True)
@@ -892,11 +1092,14 @@ with tabs[5]:
         ]
         render_quiz("Session 6", w11_questions)
 
+    with sub_tabs[2]:
+        render_ai_generator(5, "Session 6: Weeks 11 & 12 System Acquisition & E-Business")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # TAB 7: WEEK 13 (CHANGE MANAGEMENT & CONTINUITY)
 # ─────────────────────────────────────────────────────────────────────────────
 with tabs[6]:
-    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Practice Quiz"])
+    sub_tabs = st.tabs(["📖 Lecture Notes & Sandbox", "📝 Standard Practice Quiz", "🤖 AI Dynamic Quiz"])
     
     with sub_tabs[0]:
         st.markdown('<div class="interactive-header"><h3>⚡ Change Management & Business Continuity Planning (BCP)</h3></div>', unsafe_allow_html=True)
@@ -969,3 +1172,6 @@ with tabs[6]:
             }
         ]
         render_quiz("Session 7", w13_questions)
+
+    with sub_tabs[2]:
+        render_ai_generator(6, "Session 7: Week 13 BCP, Change Management & Resilience")
