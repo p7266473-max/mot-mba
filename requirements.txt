@@ -1,2 +1,6 @@
-streamlit>=1.30.0
+streamlit
+pydantic
+orjson
 pandas
+streamlit-option-menu
+streamlit-extras

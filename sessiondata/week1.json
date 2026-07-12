@@ -1,0 +1,320 @@
+{
+  "week": 1,
+  "title": "Systems Thinking & Information as a Strategic Asset",
+  "questions": [
+    {
+      "id": "w1_q1",
+      "type": "mcq",
+      "question": "Which of the following best defines a 'system' within the context of technology management?",
+      "choices": [
+        "A standalone server running compiled operating system binaries.",
+        "A set of interrelated components (people, process, technology) working together to achieve a common goal.",
+        "An ad-hoc group of software scripts without defined data models.",
+        "A pure hardware network switch configuration."
+      ],
+      "answer": 1,
+      "explanation": "A system is defined by its components (people, process, technology, governance) working together towards a common goal."
+    },
+    {
+      "id": "w1_q2",
+      "type": "mcq",
+      "question": "What is the primary role of a balancing (negative) feedback loop in a control system?",
+      "choices": [
+        "To accelerate the growth rate of system outputs exponentially.",
+        "To maintain equilibrium and correct deviations from the system goal.",
+        "To eliminate the boundaries between internal and external environments.",
+        "To log transaction operations for audit purposes."
+      ],
+      "answer": 1,
+      "explanation": "Negative feedback loops act as error-correctors and maintain equilibrium (like a thermostat)."
+    },
+    {
+      "id": "w1_q3",
+      "type": "mcq",
+      "question": "Which system interdependency conflict is most likely when introducing a new Payroll System?",
+      "choices": [
+        "HR updates files, but Finance faces budget reconciliation and cash liquidity constraints.",
+        "The operating system halts compilation due to security encryption keys.",
+        "The database index duplicates key values.",
+        "The network mesh runs out of backup power batteries."
+      ],
+      "answer": 0,
+      "explanation": "Introducing payroll affects HR, Finance (liquidity), IT (mesh networks), and employees (trust)."
+    },
+    {
+      "id": "w1_q4",
+      "type": "mcq",
+      "question": "Why is information considered a strategic asset in modern organizational system theories?",
+      "choices": [
+        "It has physical depreciation schedules similar to factory buildings.",
+        "It can be traded directly on open commodity exchanges as gold.",
+        "It reduces operational risk and enables managers to coordinate complex logistics quickly.",
+        "It replaces the need for local database storage structures."
+      ],
+      "answer": 2,
+      "explanation": "Information assets reduce uncertainty and improve resource coordination speeds."
+    },
+    {
+      "id": "w1_q5",
+      "type": "mcq",
+      "question": "A reinforcing (positive) feedback loop is characterized by which system behavior?",
+      "choices": [
+        "Stable, flat-line equilibrium metrics.",
+        "Dampened oscillations that settle to a target temperature.",
+        "Runaway exponential growth or accelerating system collapse.",
+        "Immediate shutdown of all mesh routing protocols."
+      ],
+      "answer": 2,
+      "explanation": "Positive feedback loops reinforce changes, causing runaway growth or catastrophic collapse."
+    },
+    {
+      "id": "w1_q6",
+      "type": "mcq",
+      "question": "What are the core components of any system boundary?",
+      "choices": [
+        "The separation between what is inside vs. outside the system's control.",
+        "The physical ethernet cables linking local routing hubs.",
+        "The backup policies for local database recovery blocks.",
+        "The division between junior programmers and management directors."
+      ],
+      "answer": 0,
+      "explanation": "System boundaries define the scope of what is inside the controller's authority versus the external environment."
+    },
+    {
+      "id": "w1_q7",
+      "type": "mcq",
+      "question": "In systems thinking, what does the term 'symptom-solving' refer to?",
+      "choices": [
+        "Identifying database query bottlenecks and optimizing indexes.",
+        "Solving immediate visible problems without addressing underlying structural causes.",
+        "Rebuilding electrical solar cells after battery failures.",
+        "Implementing strict code validation routines."
+      ],
+      "answer": 1,
+      "explanation": "Symptom-solving is a common management pitfall where superficial fixes are applied instead of addressing structural system issues."
+    },
+    {
+      "id": "w1_q8",
+      "type": "mcq",
+      "question": "Which of the following describes 'Information' in the context of organizational resources?",
+      "choices": [
+        "Raw, unorganized transaction numbers.",
+        "Structured, meaningful data that directly supports digital decisions.",
+        "Physical metal bullion stored in security vaults.",
+        "Code compilers running on local servers."
+      ],
+      "answer": 1,
+      "explanation": "Information adds structure and context to raw data, rendering it valuable for decision support."
+    },
+    {
+      "id": "w1_q9",
+      "type": "mcq",
+      "question": "What is a major risk of a highly interconnected system without partition controls?",
+      "choices": [
+        "Lack of database logging fields.",
+        "Changes in one small component can cascade into widespread system-wide failures.",
+        "Total loss of network interface cards.",
+        "High costs of printing paper documents."
+      ],
+      "answer": 1,
+      "explanation": "Interconnection means local failures can cascade globally across the system (unintended consequences)."
+    },
+    {
+      "id": "w1_q10",
+      "type": "mcq",
+      "question": "How do managers make strategic decisions in digital decision environments?",
+      "choices": [
+        "By delegating all data queries to system administrators.",
+        "By interpreting structured data trends and weighing system risks rather than only looking at coding details.",
+        "By configuring database query optimization parameters.",
+        "By manually writing software scripts."
+      ],
+      "answer": 1,
+      "explanation": "Managers must understand what systems can do and identify risks without needing to write code."
+    },
+    {
+      "id": "w1_q11",
+      "type": "tf",
+      "question": "A system's performance depends entirely on its individual components, not how they interact.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. System performance depends heavily on the interactions and relationships between components."
+    },
+    {
+      "id": "w1_q12",
+      "type": "tf",
+      "question": "Panic buying is a classic example of a reinforcing (positive) feedback loop that can crash a supply system.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Shortages cause panic, leading to hoarding, which worsens the shortages—an escalating reinforcing loop."
+    },
+    {
+      "id": "w1_q13",
+      "type": "tf",
+      "question": "Without information assets, it is impossible to coordinate resource distribution or prevent hoarding in a crisis.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Information coordinates operations and balances physical demand and supply constraints."
+    },
+    {
+      "id": "w1_q14",
+      "type": "tf",
+      "question": "Balancing feedback loops drive a system away from stability into runaway growth.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Balancing loops correct deviations and stabilize systems, while reinforcing loops drive runaway changes."
+    },
+    {
+      "id": "w1_q15",
+      "type": "tf",
+      "question": "A new IT system can affect HR, Finance, and employees even if they don't use the software directly.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Organizational systems are interconnected; change in one area cascades to other departments."
+    },
+    {
+      "id": "w1_q16",
+      "type": "fitb",
+      "question": "A system is defined as a set of __________ components working together toward a common goal.",
+      "answer": "interrelated",
+      "explanation": "Interrelation is the key feature of system components working interactively."
+    },
+    {
+      "id": "w1_q17",
+      "type": "fitb",
+      "question": "A feedback loop that maintains system stability and equilibrium is a __________ loop.",
+      "answer": "balancing",
+      "explanation": "Balancing (or negative) feedback loops stabilize the system."
+    },
+    {
+      "id": "w1_q18",
+      "type": "fitb",
+      "question": "A feedback loop that causes runaway expansion or collapse is a __________ loop.",
+      "answer": "reinforcing",
+      "explanation": "Reinforcing (or positive) feedback loops drive runaway behaviors."
+    },
+    {
+      "id": "w1_q19",
+      "type": "fitb",
+      "question": "Data that has been processed, structured, and organized to add value is called __________.",
+      "answer": "information",
+      "explanation": "Information is data with context, structure, and strategic meaning."
+    },
+    {
+      "id": "w1_q20",
+      "type": "fitb",
+      "question": "The boundary of a system defines what is inside versus outside of the system's __________.",
+      "answer": "control",
+      "explanation": "Boundaries divide internal elements within system control from external environmental variables."
+    },
+    {
+      "id": "w1_q21",
+      "type": "match",
+      "question": "Match each organizational component to its core definition:",
+      "left_items": [
+        "People",
+        "Process",
+        "Technology",
+        "Governance"
+      ],
+      "right_items": [
+        "Workflows and rules",
+        "Users and stakeholders",
+        "Hardware and databases",
+        "Audit and policies"
+      ],
+      "answer": {
+        "People": "Users and stakeholders",
+        "Process": "Workflows and rules",
+        "Technology": "Hardware and databases",
+        "Governance": "Audit and policies"
+      },
+      "explanation": "System components map to roles: People (users), Process (workflows), Tech (hardware), Governance (audit/policies)."
+    },
+    {
+      "id": "w1_q22",
+      "type": "match",
+      "question": "Match the loop example with its feedback type:",
+      "left_items": [
+        "Rationing limits",
+        "Panic buying hoard",
+        "Thermostat cooling"
+      ],
+      "right_items": [
+        "Balancing loop",
+        "Reinforcing loop",
+        "Linear process"
+      ],
+      "answer": {
+        "Rationing limits": "Balancing loop",
+        "Panic buying hoard": "Reinforcing loop",
+        "Thermostat cooling": "Balancing loop"
+      },
+      "explanation": "Panic buying is reinforcing; rationing and thermostats are balancing (corrective)."
+    },
+    {
+      "id": "w1_q23",
+      "type": "match",
+      "question": "Match the asset class to its example resource:",
+      "left_items": [
+        "Physical Asset",
+        "Information Asset",
+        "Financial Asset"
+      ],
+      "right_items": [
+        "Warehouse buildings",
+        "Transaction audit logs",
+        "Gold standard coins"
+      ],
+      "answer": {
+        "Physical Asset": "Warehouse buildings",
+        "Information Asset": "Transaction audit logs",
+        "Financial Asset": "Gold standard coins"
+      },
+      "explanation": "Physical assets are material; information assets are data/records; financial assets represent currency/value."
+    },
+    {
+      "id": "w1_q24",
+      "type": "scenario",
+      "scenario": "A post-collapse settlement attempts to restart trade. To maintain stability, the community leaders build a central database to track crop stocks, but they do not establish transport logistics or define trading hours. Farmers dump crops at closed depots, causing them to spoil, while city residents face immediate starvation.",
+      "question": "Which systems thinking concept explains this failure?",
+      "choices": [
+        "Lack of high-speed fiber cables.",
+        "Failing to recognize system interdependencies between inventory data and physical logistics.",
+        "The reinforcing loop of food storage optimization.",
+        "Software compiler compatibility issues."
+      ],
+      "answer": 1,
+      "explanation": "Systems thinking requires mapping the interdependencies between database records (inventory) and physical components (transportation, scheduling)."
+    },
+    {
+      "id": "w1_q25",
+      "type": "scenario",
+      "scenario": "A local community leader notices food reserves are dropping. To solve this, she immediately opens the emergency reserves without changing the distribution rules. This causes a massive buying spike where families purchase more than they need, resulting in total depletion of the emergency stock in 48 hours.",
+      "question": "What feedback loop error did the leader make?",
+      "choices": [
+        "She applied a balancing control when she should have used a reinforcing loop.",
+        "She treated a symptom (reserves drop) without changing consumption rules, triggering a reinforcing panic buying loop.",
+        "She spent too much time compiling hardware assets.",
+        "She configured the server database backup files incorrectly."
+      ],
+      "answer": 1,
+      "explanation": "Releasing stocks without rule changes reinforces the hoarding panic buying loop, which empties reserves completely."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+/* Modern premium dark-slate stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    color: #F8FAFC;
+    font-weight: 800;
+}
+
+.stRadio > label {
+    font-weight: 600;
+    color: #94A3B8;
+}
+
+.stTextInput > label {
+    font-weight: 600;
+    color: #94A3B8;
+}
+
+.stSelectbox > label {
+    font-weight: 600;
+    color: #94A3B8;
+}

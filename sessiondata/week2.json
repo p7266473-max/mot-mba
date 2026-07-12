@@ -1,0 +1,317 @@
+{
+  "week": 2,
+  "title": "Technology Planning & Requirements Gathering",
+  "questions": [
+    {
+      "id": "w2_q1",
+      "type": "mcq",
+      "question": "What is the core mistake of 'Tech-First Thinking' in technology planning?",
+      "choices": [
+        "Purchasing a software tool before identifying the actual business problem.",
+        "Using open-source software libraries.",
+        "Relying on local area networks instead of cloud databases.",
+        "Hiring developers before writing HTML stylesheets."
+      ],
+      "answer": 0,
+      "explanation": "Tech-First Thinking forces popular or expensive tools on an organization without scoping real requirements first."
+    },
+    {
+      "id": "w2_q2",
+      "type": "mcq",
+      "question": "Which of the following defines a functional requirement in systems design?",
+      "choices": [
+        "The system must load pages in under 1 second.",
+        "The system database must encrypt all password fields.",
+        "The system must allow traders to check inventory stock balances.",
+        "The system must achieve 99.9% uptime."
+      ],
+      "answer": 2,
+      "explanation": "Functional requirements define WHAT a system must do (functions, data inputs/outputs)."
+    },
+    {
+      "id": "w2_q3",
+      "type": "mcq",
+      "question": "Which parameter describes a non-functional requirement?",
+      "choices": [
+        "Allow a supervisor to delete a transaction.",
+        "Print daily tax audit summaries.",
+        "Ensure the platform remains operational during power-grid down times (reliability).",
+        "Record farmer name and grain weight."
+      ],
+      "answer": 2,
+      "explanation": "Non-functional requirements specify quality constraints on HOW the system operates."
+    },
+    {
+      "id": "w2_q4",
+      "type": "mcq",
+      "question": "Which requirement gathering method is best for understanding how employees currently perform tasks manually?",
+      "choices": [
+        "Distributing anonymous email surveys.",
+        "Direct observation of workflows.",
+        "Reviewing developer API documentation.",
+        "Running automatic database diagnostic checks."
+      ],
+      "answer": 1,
+      "explanation": "Direct observation reveals the raw reality of how tasks are run without relying on user memory."
+    },
+    {
+      "id": "w2_q5",
+      "type": "mcq",
+      "question": "Why is stakeholder involvement critical during the requirements phase?",
+      "choices": [
+        "It speeds up code compilation times.",
+        "Different stakeholder groups have different, sometimes conflicting, system requirements.",
+        "It eliminates the need for database index optimization.",
+        "It allows managers to avoid writing technical documentation."
+      ],
+      "answer": 1,
+      "explanation": "Stakeholders (farmers, traders, managers) have unique requirements that must be balanced during system design."
+    },
+    {
+      "id": "w2_q6",
+      "type": "mcq",
+      "question": "What does a business capability analysis attempt to map?",
+      "choices": [
+        "The programming syntax choices for frontend layout.",
+        "What an organization must do to survive and execute its strategy.",
+        "The speed of network packets across mesh lines.",
+        "The storage capacity of secondary backup drives."
+      ],
+      "answer": 1,
+      "explanation": "Capability analysis links technology strategy to core business execution needs."
+    },
+    {
+      "id": "w2_q7",
+      "type": "mcq",
+      "question": "Which characteristic defines a human-centered system requirement?",
+      "choices": [
+        "Maximum CPU clock speed configuration.",
+        "Usability, accessibility, simplicity, and user trust.",
+        "Minimum network cable resistance parameters.",
+        "Low server hosting fees."
+      ],
+      "answer": 1,
+      "explanation": "Human-centered design focuses on user adoption, simplicity, trust, and ease of learning."
+    },
+    {
+      "id": "w2_q8",
+      "type": "mcq",
+      "question": "What is the primary risk of vendor-driven technology decisions?",
+      "choices": [
+        "Software providers might define business processes based on what their tool does, rather than business needs.",
+        "The software will compile into unreadable machine binaries.",
+        "The database will run out of space for new users.",
+        "Users will bypass the login credentials."
+      ],
+      "answer": 0,
+      "explanation": "Vendor-driven planning allows suppliers to dictate business design based on pre-packaged features."
+    },
+    {
+      "id": "w2_q9",
+      "type": "mcq",
+      "question": "Which metric evaluates system scalability?",
+      "choices": [
+        "The system must encrypt all user passwords.",
+        "The system must load transaction histories within 3 seconds.",
+        "The system must support growth from 100 to 10,000 active users without degrading performance.",
+        "The system must allow reports to be printed as PDF."
+      ],
+      "answer": 2,
+      "explanation": "Scalability is a non-functional constraint regarding how a system adapts to increased operational load."
+    },
+    {
+      "id": "w2_q10",
+      "type": "mcq",
+      "question": "What is the correct flow for digital strategy planning?",
+      "choices": [
+        "Buy software ➔ Code database ➔ Identify requirements.",
+        "Identify business problem ➔ Scope requirements ➔ Evaluate options ➔ Aligned software choice.",
+        "Hire developers ➔ Run beta test ➔ Define target capability.",
+        "Deploy code ➔ Write user manuals ➔ Audit system requirements."
+      ],
+      "answer": 1,
+      "explanation": "Planning must flow from problem discovery to requirement analysis before selecting software."
+    },
+    {
+      "id": "w2_q11",
+      "type": "tf",
+      "question": "A technically flawless system is a success even if target users refuse to adopt it.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. User adoption is the ultimate metric of system success; human requirements must be met."
+    },
+    {
+      "id": "w2_q12",
+      "type": "tf",
+      "question": "Functional requirements define what the system does, while non-functional requirements define how it operates.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Functional is behavior (logins, reports); non-functional is quality constraints (uptime, security)."
+    },
+    {
+      "id": "w2_q13",
+      "type": "tf",
+      "question": "Purchasing a popular CRM platform before identifying corporate customer needs is a correct planning practice.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. This is a classic 'Solution-Before-Problem' pitfall (Tech-First Thinking)."
+    },
+    {
+      "id": "w2_q14",
+      "type": "tf",
+      "question": "Direct observation can reveal requirement details that users might forget to mention in interviews.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Observing actual workflows spots inefficiencies and undocumented workarounds."
+    },
+    {
+      "id": "w2_q15",
+      "type": "tf",
+      "question": "Security constraints on database access are classified as functional requirements.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Security is a non-functional quality constraint regarding system governance."
+    },
+    {
+      "id": "w2_q16",
+      "type": "fitb",
+      "question": "Selecting a software solution before identifying the actual business problem is called __________-first thinking.",
+      "answer": "technology",
+      "explanation": "Technology-first (or tech-first) thinking is a major strategic planning mistake."
+    },
+    {
+      "id": "w2_q17",
+      "type": "fitb",
+      "question": "Requirements that specify quality constraints (like uptime, scalability, and security) are __________ requirements.",
+      "answer": "non-functional",
+      "explanation": "Non-functional requirements govern how the system behaves under performance constraints."
+    },
+    {
+      "id": "w2_q18",
+      "type": "fitb",
+      "question": "Anyone who is affected by, or involved in, the implementation of a new system is a __________.",
+      "answer": "stakeholder",
+      "explanation": "Stakeholders include users, administrators, clients, and developers."
+    },
+    {
+      "id": "w2_q19",
+      "type": "fitb",
+      "question": "Observing workflows directly to gather system needs is a __________-driven requirements method.",
+      "answer": "data",
+      "explanation": "Observation, surveys, and logs provide objective data-driven inputs."
+    },
+    {
+      "id": "w2_q20",
+      "type": "fitb",
+      "question": "The design dimension that ensures users trust that records are stored fairly is called __________.",
+      "answer": "trust",
+      "explanation": "Trust is a central human-centered requirement for community adoption."
+    },
+    {
+      "id": "w2_q21",
+      "type": "match",
+      "question": "Match the requirement example to its proper classification:",
+      "left_items": [
+        "System must load page within 2s",
+        "System must save transaction record",
+        "System must encrypt user balances"
+      ],
+      "right_items": [
+        "Non-Functional (Performance)",
+        "Functional (Feature)",
+        "Non-Functional (Security)"
+      ],
+      "answer": {
+        "System must load page within 2s": "Non-Functional (Performance)",
+        "System must save transaction record": "Functional (Feature)",
+        "System must encrypt user balances": "Non-Functional (Security)"
+      },
+      "explanation": "Performance and security define qualities (non-functional), while saving records is a system action (functional)."
+    },
+    {
+      "id": "w2_q22",
+      "type": "match",
+      "question": "Match the stakeholder profile to their primary system concern:",
+      "left_items": [
+        "Trade Clerks",
+        "Logistics Teams",
+        "Security Officers"
+      ],
+      "right_items": [
+        "Fast transaction logging",
+        "Route capacity tracking",
+        "Preventing balance editing"
+      ],
+      "answer": {
+        "Trade Clerks": "Fast transaction logging",
+        "Logistics Teams": "Route capacity tracking",
+        "Security Officers": "Preventing balance editing"
+      },
+      "explanation": "Each stakeholder has target operational priorities within the system design."
+    },
+    {
+      "id": "w2_q23",
+      "type": "match",
+      "question": "Match the gathering source to its description:",
+      "left_items": [
+        "Interviews",
+        "Transaction logs",
+        "Observation"
+      ],
+      "right_items": [
+        "Deep dialogs with leaders",
+        "Analyzing database entries",
+        "Watching manual trade tasks"
+      ],
+      "answer": {
+        "Interviews": "Deep dialogs with leaders",
+        "Transaction logs": "Analyzing database entries",
+        "Observation": "Watching manual trade tasks"
+      },
+      "explanation": "Interviews gather qualitative views; logs extract data records; observation audits actions."
+    },
+    {
+      "id": "w2_q24",
+      "type": "scenario",
+      "scenario": "An IT manager in the kingdom buys a complex ERP software from a traveling salesman because it has advanced analytics. When deployed, the trade clerks find it requires high-power processors they don't have, and the interface is too complex for them to input transaction lines quickly. They return to manual paper notebooks.",
+      "question": "Which requirement gathering pitfall is shown here?",
+      "choices": [
+        "Failure to configure network interfaces.",
+        "Failing to evaluate human usability constraints and hardware limitations during the planning phase.",
+        "Using database structures that are too small.",
+        "Choosing open-source code libraries."
+      ],
+      "answer": 1,
+      "explanation": "Failing to check hardware constraints and user usability needs leads to immediate system rejection."
+    },
+    {
+      "id": "w2_q25",
+      "type": "scenario",
+      "scenario": "A development team designs an online food order ledger. They document that the software must allow users to select items and pay. However, they do not state that the portal must recover from grid downtime within 10 minutes. During the first storm, the system fails and remains offline for 3 days, spoiling all local dairy shipments.",
+      "question": "What type of specification error occurred?",
+      "choices": [
+        "The team forgot to specify functional features.",
+        "The team failed to define critical non-functional reliability requirements (recovery times).",
+        "They coded the frontend pages in incorrect CSS files.",
+        "They used incorrect database indexing tools."
+      ],
+      "answer": 1,
+      "explanation": "Omitting non-functional recovery limits (like RTO) makes systems highly vulnerable to operational disasters."
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "week": 4,
+  "title": "Information Ethics & Governance",
+  "questions": [
+    {
+      "id": "w4_q1",
+      "type": "mcq",
+      "question": "Under the Data Protection Act frameworks, what is a primary threat vector for database ledgers?",
+      "choices": [
+        "Unsynchronized font layouts on CSS.",
+        "Unauthorized data manipulation and tracking surveillance.",
+        "Lack of automated code tests.",
+        "Low CPU core speed availability."
+      ],
+      "answer": 1,
+      "explanation": "Data protection focuses on preventing confidential leaks, unauthorized manipulation, and surveillance states (Slide 24)."
+    },
+    {
+      "id": "w4_q2",
+      "type": "mcq",
+      "question": "What is the primary role of AI in Decision Support Systems (DSS)?",
+      "choices": [
+        "To assume full legal and operational accountability for database choices.",
+        "To assist managers by identifying trends, but humans remain accountable.",
+        "To write code files and replace engineers completely.",
+        "To bypass standard regulatory audits."
+      ],
+      "answer": 1,
+      "explanation": "AI functions as a decision aid. Operational and ethical accountability belongs strictly to human managers (Slide 26)."
+    },
+    {
+      "id": "w4_q3",
+      "type": "mcq",
+      "question": "Which of the following is the correct order of the four-question ethical decision checklist?",
+      "choices": [
+        "Is it cheap? Is it fast? Is it legal? Is it popular?",
+        "Is it legal? Is it fair? Is it necessary? What are the consequences?",
+        "Who built it? Is it open-source? How is it hosted? Is it fast?",
+        "Is it encrypted? Is it database-backed? Is it logged? Is it scalable?"
+      ],
+      "answer": 1,
+      "explanation": "The checklist: Legal (policy), Fair (equity), Necessary (scale), and Consequences (risks) (Slide 25)."
+    },
+    {
+      "id": "w4_q4",
+      "type": "mcq",
+      "question": "What is a main risk of invasive workplace monitoring policies?",
+      "choices": [
+        "High costs of network cabling.",
+        "Reduced employee trust, increased privacy anxiety, and lower morale.",
+        "Bypassing data validation code scripts.",
+        "Slow system database performance."
+      ],
+      "answer": 1,
+      "explanation": "While monitoring can protect compliance, over-monitoring destroys workforce trust and morale."
+    },
+    {
+      "id": "w4_q5",
+      "type": "mcq",
+      "question": "Why does a manager define clear data governance rules?",
+      "choices": [
+        "To accelerate the speed of code compilation.",
+        "To ensure data integrity, restrict access, and manage compliance.",
+        "To avoid using secondary backup servers.",
+        "To automatically generate CSS variables."
+      ],
+      "answer": 1,
+      "explanation": "Governance defines access authorities and protects data from corruption or abuse."
+    },
+    {
+      "id": "w4_q6",
+      "type": "mcq",
+      "question": "In a post-collapse ledger system, why must leaders respect data limits?",
+      "choices": [
+        "To save storage block bytes.",
+        "To prevent surveillance misuse and maintain citizen trust in new institutions.",
+        "To accelerate mesh router sync schedules.",
+        "To avoid using Python scripting tools."
+      ],
+      "answer": 1,
+      "explanation": "Over-gathering data in a crisis opens risk vectors for administrative overreach and abuse."
+    },
+    {
+      "id": "w4_q7",
+      "type": "mcq",
+      "question": "Which issue is categorized under 'Computer Ethics'?",
+      "choices": [
+        "Configuring proper database query indexes.",
+        "Weighing equity, bias, privacy, and tracking rights in system design.",
+        "Choosing between Linux or Windows servers.",
+        "Installing system cooling hardware."
+      ],
+      "answer": 1,
+      "explanation": "Ethics concerns values, fairness, rights, and responsibilities in tech implementations."
+    },
+    {
+      "id": "w4_q8",
+      "type": "mcq",
+      "question": "What is a secondary benefit of intranet-based coordination portals (DSS)?",
+      "choices": [
+        "They allow unlimited public internet routing.",
+        "They speed up resource coordination and reduce public panic.",
+        "They eliminate the need for backup batteries.",
+        "They replace manual trade clerks entirely."
+      ],
+      "answer": 1,
+      "explanation": "DSS portals keep stakeholders updated, coordinating distribution and stabilizing public expectations."
+    },
+    {
+      "id": "w4_q9",
+      "type": "mcq",
+      "question": "Why can AI not replace human managers in operational decision-making?",
+      "choices": [
+        "AI has no ability to write SQL queries.",
+        "AI lacks accountability, ethical reasoning capacity, and holistic judgment.",
+        "AI operates at too slow of a processing speed.",
+        "AI cannot run inside local area networks."
+      ],
+      "answer": 1,
+      "explanation": "AI models process data but cannot hold legal responsibility or evaluate complex human values."
+    },
+    {
+      "id": "w4_q10",
+      "type": "mcq",
+      "question": "What does data integrity refer to in database governance?",
+      "choices": [
+        "The physical strength of server components.",
+        "The accuracy, completeness, and reliability of data over its lifecycle.",
+        "The speed of network sync schedules.",
+        "The cost of buying backup software."
+      ],
+      "answer": 1,
+      "explanation": "Integrity guarantees that data records are not modified or corrupted by unauthorized means."
+    },
+    {
+      "id": "w4_q11",
+      "type": "tf",
+      "question": "Under modern ethics guidelines, any technology that can be built should be implemented.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Managers must evaluate ethical limits (surveillance, tracking) before building systems."
+    },
+    {
+      "id": "w4_q12",
+      "type": "tf",
+      "question": "Workplace monitoring is always illegal regardless of corporate security needs.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Monitoring is legal for compliance and security but requires fair boundaries."
+    },
+    {
+      "id": "w4_q13",
+      "type": "tf",
+      "question": "The ethical question of fairness includes auditing AI models for data biases.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Fairness requires ensuring systems do not produce biased outputs against subgroups."
+    },
+    {
+      "id": "w4_q14",
+      "type": "tf",
+      "question": "Information governance policies are only required when using cloud servers.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Governance is required for both online and offline (mesh, local) databases."
+    },
+    {
+      "id": "w4_q15",
+      "type": "tf",
+      "question": "An intranet DSS speeds up coordination by sharing resource logs across mesh nodes.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Local networks share strategic information, avoiding panic and optimizing shipping."
+    },
+    {
+      "id": "w4_q16",
+      "type": "fitb",
+      "question": "The framework that regulates database privacy and citizen data tracking is the Data __________ Act.",
+      "answer": "protection",
+      "explanation": "Data Protection Acts establish rules for collecting, storing, and securing data."
+    },
+    {
+      "id": "w4_q17",
+      "type": "fitb",
+      "question": "AI systems support managers, but __________ remains strictly human.",
+      "answer": "accountability",
+      "explanation": "Managers cannot delegate ultimate operational accountability to AI systems."
+    },
+    {
+      "id": "w4_q18",
+      "type": "fitb",
+      "question": "A network restricted to internal corporate use with access controls is an __________.",
+      "answer": "intranet",
+      "explanation": "Intranets support internal collaboration safely inside local firewalls."
+    },
+    {
+      "id": "w4_q19",
+      "type": "fitb",
+      "question": "The step in the ethical decision checklist evaluating risks versus benefits is __________.",
+      "answer": "consequences",
+      "explanation": "Consequences check for unintended risks or harms from technology."
+    },
+    {
+      "id": "w4_q20",
+      "type": "fitb",
+      "question": "Unauthorized change or hacking of ledger balances violates data __________.",
+      "answer": "integrity",
+      "explanation": "Data integrity guarantees records remain unchanged and correct."
+    },
+    {
+      "id": "w4_q21",
+      "type": "match",
+      "question": "Match the ethical concern with its system risk scenario:",
+      "left_items": [
+        "Privacy Leak",
+        "Data Bias",
+        "Workplace Stress"
+      ],
+      "right_items": [
+        "Clerks access health records",
+        "AI allocates resources unfairly",
+        "Logging keystrokes hourly"
+      ],
+      "answer": {
+        "Privacy Leak": "Clerks access health records",
+        "Data Bias": "AI allocates resources unfairly",
+        "Workplace Stress": "Logging keystrokes hourly"
+      },
+      "explanation": "Privacy leaks reveal data; bias creates unfairness; monitoring keystrokes raises employee anxiety."
+    },
+    {
+      "id": "w4_q22",
+      "type": "match",
+      "question": "Match the checklist question to its target metric:",
+      "left_items": [
+        "Is it legal?",
+        "Is it fair?",
+        "Is it necessary?"
+      ],
+      "right_items": [
+        "Compliance check",
+        "Equity check",
+        "Purpose scope check"
+      ],
+      "answer": {
+        "Is it legal?": "Compliance check",
+        "Is it fair?": "Equity check",
+        "Is it necessary?": "Purpose scope check"
+      },
+      "explanation": "Legal is compliance; fair is equity; necessary scopes purpose constraints."
+    },
+    {
+      "id": "w4_q23",
+      "type": "match",
+      "question": "Match the portal component to its functionality:",
+      "left_items": [
+        "Audit log",
+        "Encryption keys",
+        "Access roles"
+      ],
+      "right_items": [
+        "Record balance edits",
+        "Secure data packets",
+        "Assign editing rights"
+      ],
+      "answer": {
+        "Audit log": "Record balance edits",
+        "Encryption keys": "Secure data packets",
+        "Access roles": "Assign editing rights"
+      },
+      "explanation": "Audit logs track edits; encryption secures packets; roles manage modification authorities."
+    },
+    {
+      "id": "w4_q24",
+      "type": "scenario",
+      "scenario": "A regional commander implements a mesh network tool that checks employee locations every 5 minutes. The goal is to track trade speed. Within 3 weeks, two clerks resign due to anxiety, and others report fake locations by leaving devices at desks, corrupting the transit log database.",
+      "question": "What management mistake was made here?",
+      "choices": [
+        "They should have used faster GPS trackers.",
+        "Failing to balance workplace monitoring security benefits against trust and morale costs.",
+        "Failing to write code validation scripts.",
+        "Bypassing the database index settings."
+      ],
+      "answer": 1,
+      "explanation": "Over-monitoring damages trust, inducing employees to corrupt database metrics to bypass surveillance."
+    },
+    {
+      "id": "w4_q25",
+      "type": "scenario",
+      "scenario": "An AI system is deployed to allocate vaccines. It reads historical logs and notices that central settlements received drugs faster. It recommends sending all vaccines to central depots, leaving regional outposts with zero medicine, triggering a localized outbreak.",
+      "question": "What concept describes this AI failure?",
+      "choices": [
+        "Slow network sync speed.",
+        "A failure to audit AI bias, showing why AI should support decisions but humans remain accountable.",
+        "The system had too few database backup disks.",
+        "Coding in incorrect HTML formats."
+      ],
+      "answer": 1,
+      "explanation": "AI models replicate historical biases. Humans must remain accountable to override unfair automated recommendations."
+    }
+  ]
+}

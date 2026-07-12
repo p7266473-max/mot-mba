@@ -1,0 +1,317 @@
+{
+  "week": 7,
+  "title": "E-Business Ecosystems & Cloud Governance",
+  "questions": [
+    {
+      "id": "w7_q1",
+      "type": "mcq",
+      "question": "What is the primary operational difference between an Intranet and an Extranet?",
+      "choices": [
+        "Intranets are open to the public; Extranets are internal.",
+        "Intranets are internal corporate networks; Extranets extend secure access to trusted suppliers and partners.",
+        "Intranets require server OS; Extranets run strictly on laptops.",
+        "There is no difference in access controls."
+      ],
+      "answer": 1,
+      "explanation": "Intranets support internal collaboration; Extranets extend secure boundaries to suppliers/partners."
+    },
+    {
+      "id": "w7_q2",
+      "type": "mcq",
+      "question": "In cloud infrastructure deployment models, which level gives sysadmins maximum control over the operating system?",
+      "choices": [
+        "SaaS (Software as a Service)",
+        "PaaS (Platform as a Service)",
+        "IaaS (Infrastructure as a Service)",
+        "FaaS (Function as a Service)"
+      ],
+      "answer": 2,
+      "explanation": "IaaS provides raw VM compute resources, allowing the client full control over OS configurations."
+    },
+    {
+      "id": "w7_q3",
+      "type": "mcq",
+      "question": "What does RTO (Recovery Time Objective) define in continuity planning?",
+      "choices": [
+        "The maximum age of data that must be recovered from backup archives.",
+        "The target duration of time within which a system must be restored after a disaster.",
+        "The cost of purchasing duplicate database backup disks.",
+        "The speed of network interface packet transfers."
+      ],
+      "answer": 1,
+      "explanation": "RTO is the target duration to restore operational capacity after a crash."
+    },
+    {
+      "id": "w7_q4",
+      "type": "mcq",
+      "question": "What does RPO (Recovery Point Objective) define?",
+      "choices": [
+        "The maximum tolerable period of data loss measured in time (e.g. last 4 hours of logs).",
+        "The physical location of backup vaults.",
+        "The speed of database search runs.",
+        "The number of admins required to verify a restore."
+      ],
+      "answer": 0,
+      "explanation": "RPO measures data loss tolerance, defining the maximum age of data that must be recoverable."
+    },
+    {
+      "id": "w7_q5",
+      "type": "mcq",
+      "question": "Which cloud model describes using Google Workspace or Microsoft 365 directly from a browser?",
+      "choices": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "Custom Bare-Metal"
+      ],
+      "answer": 2,
+      "explanation": "SaaS provides ready-to-use software applications managed entirely by the vendor."
+    },
+    {
+      "id": "w7_q6",
+      "type": "mcq",
+      "question": "Why does a company construct a Disaster Recovery Plan (DRP)?",
+      "choices": [
+        "To speed up program compilation times.",
+        "To establish structured steps to restore operations and data after a system disaster.",
+        "To reduce software license costs.",
+        "To bypass standard regulatory audits."
+      ],
+      "answer": 1,
+      "explanation": "DRP provides step-by-step procedures to recover systems and minimize business downtime."
+    },
+    {
+      "id": "w7_q7",
+      "type": "mcq",
+      "question": "What is a 'Digital Ecosystem' in modern e-business?",
+      "choices": [
+        "The biological variables surrounding server farms.",
+        "A network of interconnected businesses, customers, and platforms that co-create value.",
+        "An isolated database server.",
+        "A code script that runs without network access."
+      ],
+      "answer": 1,
+      "explanation": "Digital ecosystems connect platforms, API logs, and suppliers to generate mutual value."
+    },
+    {
+      "id": "w7_q8",
+      "type": "mcq",
+      "question": "What is a main risk of total vendor lock-in in cloud services?",
+      "choices": [
+        "Slow page scrolling.",
+        "High costs and difficulty in migrating data and code to another cloud provider.",
+        "Loss of database search fields.",
+        "Bypassing login credentials."
+      ],
+      "answer": 1,
+      "explanation": "Vendor lock-in leaves organizations dependent on a single supplier, exposing them to price hikes."
+    },
+    {
+      "id": "w7_q9",
+      "type": "mcq",
+      "question": "Which cloud service level allows programmers to deploy code directly without configuring operating systems?",
+      "choices": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "Bare-Metal OS"
+      ],
+      "answer": 1,
+      "explanation": "PaaS provides the runtime environment, database, and OS layer, allowing developers to focus on coding."
+    },
+    {
+      "id": "w7_q10",
+      "type": "mcq",
+      "question": "What is a primary concern of cloud governance?",
+      "choices": [
+        "The color layout of the cloud provider logo.",
+        "Managing cost compliance, data security policies, and resource configurations.",
+        "The physical cooling setup in a distant datacenter.",
+        "Choosing program font variables."
+      ],
+      "answer": 1,
+      "explanation": "Governance manages spending limits, access permissions, and data residency compliance in the cloud."
+    },
+    {
+      "id": "w7_q11",
+      "type": "tf",
+      "question": "An Intranet extends secure access to external partners and suppliers.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Intranets are internal. Extranets extend secure access to external partners."
+    },
+    {
+      "id": "w7_q12",
+      "type": "tf",
+      "question": "Under a SaaS model, the client's sysadmin is responsible for patching the host OS kernel.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. In SaaS, the vendor manages all infrastructure, OS patching, and code logic."
+    },
+    {
+      "id": "w7_q13",
+      "type": "tf",
+      "question": "RTO measures the tolerable duration of data loss during a system disaster.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. RTO measures recovery speed (downtime). RPO measures tolerable data loss."
+    },
+    {
+      "id": "w7_q14",
+      "type": "tf",
+      "question": "A business continuity plan focuses strictly on data backups and does not include manual operations procedures.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. BCP covers manual fallbacks, staff roles, and communication rules during disruptions."
+    },
+    {
+      "id": "w7_q15",
+      "type": "tf",
+      "question": "IaaS provides the raw compute resources, requiring the client to install and patch the operating system.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Infrastructure as a Service leaves OS management and configuration to the client."
+    },
+    {
+      "id": "w7_q16",
+      "type": "fitb",
+      "question": "The time limit target within which a system must be recovered after a crash is the __________.",
+      "answer": "rto",
+      "explanation": "RTO stands for Recovery Time Objective."
+    },
+    {
+      "id": "w7_q17",
+      "type": "fitb",
+      "question": "The metric defining the maximum age of data that must be recovered is the __________.",
+      "answer": "rpo",
+      "explanation": "RPO stands for Recovery Point Objective."
+    },
+    {
+      "id": "w7_q18",
+      "type": "fitb",
+      "question": "A secure network that extends internal assets to trusted suppliers is an __________.",
+      "answer": "extranet",
+      "explanation": "Extranets extend intranet limits to trusted external partners."
+    },
+    {
+      "id": "w7_q19",
+      "type": "fitb",
+      "question": "Google Sheets or Office online is an example of the cloud service level known as __________.",
+      "answer": "saas",
+      "explanation": "SaaS (Software as a Service) delivers full apps through browser lines."
+    },
+    {
+      "id": "w7_q20",
+      "type": "fitb",
+      "question": "A plan containing manual fallbacks and communications during a disaster is a business __________ plan.",
+      "answer": "continuity",
+      "explanation": "Business Continuity Plans (BCP) cover overall operational resilience."
+    },
+    {
+      "id": "w7_q21",
+      "type": "match",
+      "question": "Match the cloud model to its primary management boundary:",
+      "left_items": [
+        "IaaS",
+        "PaaS",
+        "SaaS"
+      ],
+      "right_items": [
+        "Configure VM & OS",
+        "Configure code runtime",
+        "Configure user access only"
+      ],
+      "answer": {
+        "IaaS": "Configure VM & OS",
+        "PaaS": "Configure code runtime",
+        "SaaS": "Configure user access only"
+      },
+      "explanation": "IaaS leaves OS to admin; PaaS manages OS but leaves code to programmer; SaaS manages all except logins."
+    },
+    {
+      "id": "w7_q22",
+      "type": "match",
+      "question": "Match the continuity metric to its operational target:",
+      "left_items": [
+        "RTO (2 hours)",
+        "RPO (4 hours)",
+        "BCP fallback"
+      ],
+      "right_items": [
+        "Restore servers in 2h",
+        "Restore data up to last 4h",
+        "Use paper ledger temporarily"
+      ],
+      "answer": {
+        "RTO (2 hours)": "Restore servers in 2h",
+        "RPO (4 hours)": "Restore data up to last 4h",
+        "BCP fallback": "Use paper ledger temporarily"
+      },
+      "explanation": "RTO dictates time limit; RPO limits data age loss; BCP manages manual fallbacks."
+    },
+    {
+      "id": "w7_q23",
+      "type": "match",
+      "question": "Match the network type to its target scope:",
+      "left_items": [
+        "Intranet",
+        "Extranet",
+        "Public Web"
+      ],
+      "right_items": [
+        "Strictly internal employees",
+        "Trusted supplier portals",
+        "Anonymous global viewers"
+      ],
+      "answer": {
+        "Intranet": "Strictly internal employees",
+        "Extranet": "Trusted supplier portals",
+        "Public Web": "Anonymous global viewers"
+      },
+      "explanation": "Intranets serve staff; extranets serve partners; public web serves everyone."
+    },
+    {
+      "id": "w7_q24",
+      "type": "scenario",
+      "scenario": "A retail database crashes at 14:00. The IT team restores the VM server at 16:00. However, they discover the last database backup occurred at 08:00. All transactions logged between 08:00 and 14:00 are lost, totaling 500 sales entries.",
+      "question": "Which metric describes the 6 hours of lost data?",
+      "choices": [
+        "The RTO target was exceeded.",
+        "The RPO metric boundary was violated.",
+        "The database was built in IaaS.",
+        "A failure of extranet firewall checks."
+      ],
+      "answer": 1,
+      "explanation": "The age of lost data is governed by the Recovery Point Objective (RPO) configuration."
+    },
+    {
+      "id": "w7_q25",
+      "type": "scenario",
+      "scenario": "During a massive flood, a settlement's central database server is completely destroyed. The IT director immediately directs trade posts to switch to paper ledgers and assigns runners to coordinate balances hourly, preventing market panic while a new server is configured.",
+      "question": "What document guided these manual operational fallbacks?",
+      "choices": [
+        "A compiler stylesheet configuration.",
+        "A Business Continuity Plan (BCP).",
+        "A technical database schema diagram.",
+        "An rclone configure command script."
+      ],
+      "answer": 1,
+      "explanation": "BCP manages human and process fallbacks to ensure operations continue even when technical infrastructure fails."
+    }
+  ]
+}

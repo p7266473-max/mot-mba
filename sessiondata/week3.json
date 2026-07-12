@@ -1,0 +1,317 @@
+{
+  "week": 3,
+  "title": "Systems Design & Digital Transformation",
+  "questions": [
+    {
+      "id": "w3_q1",
+      "type": "mcq",
+      "question": "What is the primary difference between conceptual and technical system design?",
+      "choices": [
+        "Conceptual defines purpose, relationships, and business rules; technical defines code structures and database schemes.",
+        "Conceptual design is for developers; technical design is for business clients.",
+        "Conceptual focus is strictly on hardware specs; technical design maps organization charts.",
+        "Conceptual design happens after deployment; technical design is done in planning."
+      ],
+      "answer": 0,
+      "explanation": "Conceptual design aligns managers on rules and relationships, while technical design is the developers' code blueprint (Slide 21)."
+    },
+    {
+      "id": "w3_q2",
+      "type": "mcq",
+      "question": "In the Digital Transformation Roadmap, what is Stage 3?",
+      "choices": [
+        "Manual Operations",
+        "Digital Records (isolated ledgers)",
+        "Integrated Systems (connected departments)",
+        "Intelligent Systems"
+      ],
+      "answer": 1,
+      "explanation": "The roadmap flows: 1. Manual -> 2. Organized -> 3. Digital Records -> 4. Integrated Systems -> 5. Intelligent Systems."
+    },
+    {
+      "id": "w3_q3",
+      "type": "mcq",
+      "question": "Which of the following represents a business capability in system design?",
+      "choices": [
+        "The system must use standard SQL queries.",
+        "The system must load in 1 second.",
+        "The organizational capacity to track and reconcile gold standard transactions.",
+        "A specific python-docx code package."
+      ],
+      "answer": 2,
+      "explanation": "Capabilities represent what an organization does to execute strategy (e.g. inventory tracking, auditing)."
+    },
+    {
+      "id": "w3_q4",
+      "type": "mcq",
+      "question": "Why does a manager define system architecture diagrams?",
+      "choices": [
+        "To generate code files automatically.",
+        "To map out the relationships between people, processes, technology, and data boundaries.",
+        "To verify ethernet cable resistance metrics.",
+        "To compute employee tax rates."
+      ],
+      "answer": 1,
+      "explanation": "System architecture maps connections and data paths to highlight dependencies and prevent system bottlenecks."
+    },
+    {
+      "id": "w3_q5",
+      "type": "mcq",
+      "question": "Which stage on the digital transformation roadmap must a post-collapse society target first?",
+      "choices": [
+        "Stage 5: Intelligent Systems",
+        "Stage 1: Manual Operations (stable workflows)",
+        "Stage 4: Integrated Systems",
+        "Stage 3: Digital Records"
+      ],
+      "answer": 1,
+      "explanation": "Before digitizing, stable workflows must be built manually and organized (Stages 1 and 2)."
+    },
+    {
+      "id": "w3_q6",
+      "type": "mcq",
+      "question": "What does 'Digital Records' signify in transformation planning?",
+      "choices": [
+        "Fully automated AI networks.",
+        "Storing data in isolated local databases rather than manual paper logs.",
+        "Eliminating all regional cache servers.",
+        "Relying strictly on verbal trade agreements."
+      ],
+      "answer": 1,
+      "explanation": "Digital records digitize single assets locally before linking them into integrated pipelines."
+    },
+    {
+      "id": "w3_q7",
+      "type": "mcq",
+      "question": "What is a main limitation of isolated 'Digital Records' (Stage 3)?",
+      "choices": [
+        "No database backup exists.",
+        "Systems cannot share data easily across different departments (data silos).",
+        "High cost of solar power units.",
+        "Difficulty in compiling python-pptx."
+      ],
+      "answer": 1,
+      "explanation": "Stage 3 creates database silos; Stage 4 (Integrated Systems) is needed to connect departments."
+    },
+    {
+      "id": "w3_q8",
+      "type": "mcq",
+      "question": "Which design component governs how data moves between departments?",
+      "choices": [
+        "Process and integration maps.",
+        "HTML stylesheet files.",
+        "Standard hypervisor configurations.",
+        "The layout of server cooling fans."
+      ],
+      "answer": 0,
+      "explanation": "Process and integration maps trace how data flows across organizational boundaries."
+    },
+    {
+      "id": "w3_q9",
+      "type": "mcq",
+      "question": "What occurs when you automate a broken manual process?",
+      "choices": [
+        "The process stabilizes instantly.",
+        "You speed up and amplify the errors in the system.",
+        "You eliminate the need for system maintenance.",
+        "The hardware requirements drop."
+      ],
+      "answer": 1,
+      "explanation": "Management Rule: Technology supports business needs. Automating a broken manual process just produces faster failures."
+    },
+    {
+      "id": "w3_q10",
+      "type": "mcq",
+      "question": "Which design pillar is required to ensure trust in trade records?",
+      "choices": [
+        "Using high-frequency wireless routers.",
+        "Defining clear business logic rules and keeping unalterable audit trails.",
+        "Configuring standard color layouts.",
+        "Bypassing all regulator roles."
+      ],
+      "answer": 1,
+      "explanation": "Trust is established through transparent validation rules and secure audit logs."
+    },
+    {
+      "id": "w3_q11",
+      "type": "tf",
+      "question": "Conceptual system design focus is primarily code, database layouts, and API integrations.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Conceptual design focuses on purpose, rules, and relationships; technical design handles code and schema details."
+    },
+    {
+      "id": "w3_q12",
+      "type": "tf",
+      "question": "Stage 4 of digital transformation links different departmental databases together.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Stage 4 is Integrated Systems, where departmental databases are connected."
+    },
+    {
+      "id": "w3_q13",
+      "type": "tf",
+      "question": "A system architecture map should show how data, people, and processes connect.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. An architecture map integrates all system dimensions to evaluate dependencies."
+    },
+    {
+      "id": "w3_q14",
+      "type": "tf",
+      "question": "A business system is stable even if you remove its governance or rule component.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Removing any system component (People, Process, Tech, Governance) degrades system performance."
+    },
+    {
+      "id": "w3_q15",
+      "type": "tf",
+      "question": "Isolated digital databases are classified as Stage 5 (Intelligent Systems) on the roadmap.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Isolated databases are Stage 3 (Digital Records). Stage 5 features smart alerts and analytics."
+    },
+    {
+      "id": "w3_q16",
+      "type": "fitb",
+      "question": "The design stage that maps out system purpose and business logic before coding is called __________ design.",
+      "answer": "conceptual",
+      "explanation": "Conceptual design translates business requirements into logical relationships."
+    },
+    {
+      "id": "w3_q17",
+      "type": "fitb",
+      "question": "In the digital transformation roadmap, Stage 1 represents __________ operations.",
+      "answer": "manual",
+      "explanation": "Stage 1 is manual (paper or verbal) operations."
+    },
+    {
+      "id": "w3_q18",
+      "type": "fitb",
+      "question": "Departmental databases that are isolated and cannot share data easily are called data __________.",
+      "answer": "silos",
+      "explanation": "Data silos result from isolated Stage 3 record keeping."
+    },
+    {
+      "id": "w3_q19",
+      "type": "fitb",
+      "question": "The level on the roadmap that integrates department systems is __________ systems.",
+      "answer": "integrated",
+      "explanation": "Integrated systems link isolated records across boundaries."
+    },
+    {
+      "id": "w3_q20",
+      "type": "fitb",
+      "question": "A manager should never automate a __________ manual process.",
+      "answer": "broken",
+      "explanation": "Automating a broken process only scale-up errors."
+    },
+    {
+      "id": "w3_q21",
+      "type": "match",
+      "question": "Match the roadmap level to its description:",
+      "left_items": [
+        "Stage 1",
+        "Stage 3",
+        "Stage 5"
+      ],
+      "right_items": [
+        "Paper-based operations",
+        "Isolated local databases",
+        "Smart alerts and analytics"
+      ],
+      "answer": {
+        "Stage 1": "Paper-based operations",
+        "Stage 3": "Isolated local databases",
+        "Stage 5": "Smart alerts and analytics"
+      },
+      "explanation": "Transformation maps from paper (1) to local data (3) to intelligent analytics (5)."
+    },
+    {
+      "id": "w3_q22",
+      "type": "match",
+      "question": "Match the design level to the audience:",
+      "left_items": [
+        "Conceptual Design",
+        "Technical Design",
+        "Syllabus Layout"
+      ],
+      "right_items": [
+        "Business Managers",
+        "Database Developers",
+        "Course Lecturers"
+      ],
+      "answer": {
+        "Conceptual Design": "Business Managers",
+        "Technical Design": "Database Developers",
+        "Syllabus Layout": "Course Lecturers"
+      },
+      "explanation": "Managers focus on conceptual structures; developers code technical implementations; instructors guide layouts."
+    },
+    {
+      "id": "w3_q23",
+      "type": "match",
+      "question": "Match the system component to its function:",
+      "left_items": [
+        "Business Rules",
+        "Data Flow Paths",
+        "Tech Platforms"
+      ],
+      "right_items": [
+        "Define compliance limits",
+        "Route database packets",
+        "Store binary records"
+      ],
+      "answer": {
+        "Business Rules": "Define compliance limits",
+        "Data Flow Paths": "Route database packets",
+        "Tech Platforms": "Store binary records"
+      },
+      "explanation": "Rules regulate operations; flows route data packets; platforms house hardware records."
+    },
+    {
+      "id": "w3_q24",
+      "type": "scenario",
+      "scenario": "A medical clinic coordinator wants to digitalize records. She hires a developer who starts coding database structures immediately. The developer writes code for 3 weeks but builds fields that omit prescription confirmation steps, which are legally required. The system must be scrapped and rewritten.",
+      "question": "What design phase was bypassed here?",
+      "choices": [
+        "Technical database optimization.",
+        "Conceptual design and alignment on business rules.",
+        "Server memory installation check.",
+        "Workplace monitoring audit."
+      ],
+      "answer": 1,
+      "explanation": "Skipping conceptual design leads to coding systems that violate business rules or legal requirements."
+    },
+    {
+      "id": "w3_q25",
+      "type": "scenario",
+      "scenario": "A post-collapse settlement attempts to launch an intelligent AI routing engine to direct trucks. However, truck coordinators still write routes on scrap paper, depots don't have local computers, and there is no synchronized ledger tracking truck inventory.",
+      "question": "What roadmap planning error did they make?",
+      "choices": [
+        "They should have used faster CPU chips.",
+        "They tried to deploy Stage 5 (Intelligent AI) before establishing Stage 1 (Manual), 2 (Organized), and 3 (Records) systems.",
+        "They forgot to write a CSS style sheet.",
+        "They did not purchase proprietary databases."
+      ],
+      "answer": 1,
+      "explanation": "Digital transformation requires systematic build-up; you cannot deploy intelligent systems without record-keeping foundations."
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "week": 6,
+  "title": "IT Frameworks & Transaction Processing",
+  "questions": [
+    {
+      "id": "w6_q1",
+      "type": "mcq",
+      "question": "What is the primary purpose of a Technology Management Framework?",
+      "choices": [
+        "To speed up database packet transfers.",
+        "To integrate five core dimensions: Strategy, Processes, Technology, People, and Governance.",
+        "To write code comments automatically.",
+        "To choose the cheapest hardware vendors."
+      ],
+      "answer": 1,
+      "explanation": "A technology management framework balances strategy, workflows, software, training, and audits (Slide 35)."
+    },
+    {
+      "id": "w6_q2",
+      "type": "mcq",
+      "question": "In the DIKW hierarchy, what does 'Data' represent?",
+      "choices": [
+        "Summarized trends and reports.",
+        "Raw, unorganized transaction facts (e.g., '10kg grain allocated').",
+        "Actionable operational insights.",
+        "Strategic rationing decisions."
+      ],
+      "answer": 1,
+      "explanation": "Data represents raw, unstructured events and numbers without context (Slide 37)."
+    },
+    {
+      "id": "w6_q3",
+      "type": "mcq",
+      "question": "Which system component logs daily, routine transaction records?",
+      "choices": [
+        "Decision Support System (DSS)",
+        "Transaction Processing System (TPS)",
+        "High-Command Analytics Portal",
+        "Bare-metal Hypervisor"
+      ],
+      "answer": 1,
+      "explanation": "TPS logs daily operational transactions that form the data foundation (Slide 37)."
+    },
+    {
+      "id": "w6_q4",
+      "type": "mcq",
+      "question": "How does a Decision Support System (DSS) differ from a Transaction Processing System (TPS)?",
+      "choices": [
+        "DSS is for programmers; TPS is for managers.",
+        "TPS records raw logs; DSS analyzes trends to help managers evaluate decision choices.",
+        "TPS runs on servers; DSS is printed on paper.",
+        "DSS handles security keys; TPS builds network cables."
+      ],
+      "answer": 1,
+      "explanation": "TPS operates at the transactional baseline; DSS processes logs into trend metrics to support managers."
+    },
+    {
+      "id": "w6_q5",
+      "type": "mcq",
+      "question": "In the DIKW hierarchy, how does 'Knowledge' differ from 'Information'?",
+      "choices": [
+        "Knowledge is raw numbers; Information is insights.",
+        "Information connects data points; Knowledge adds human context and actionable understanding.",
+        "Information is stored in databases; Knowledge is written in CSS.",
+        "There is no difference between them."
+      ],
+      "answer": 1,
+      "explanation": "Knowledge translates trends (information) into actionable operational understanding (Slide 37)."
+    },
+    {
+      "id": "w6_q6",
+      "type": "mcq",
+      "question": "What is the risk of using database logs that are incorrect at the TPS level?",
+      "choices": [
+        "Low CPU core metrics.",
+        "Incorrect baseline logs propagate upward, causing bad decisions at the DSS level (GIGO - Garbage In, Garbage Out).",
+        "Loss of wireless mesh connections.",
+        "Higher cost of database licenses."
+      ],
+      "answer": 1,
+      "explanation": "If transactional inputs are inaccurate, all derived trends and decisions will be flawed."
+    },
+    {
+      "id": "w6_q7",
+      "type": "mcq",
+      "question": "What represents the 'Wisdom' level in the DIKW hierarchy?",
+      "choices": [
+        "A raw log of grain shipments.",
+        "The strategic decision to establish rationing rules to survive a drought.",
+        "A spreadsheet displaying grain shortages.",
+        "An inventory database schema."
+      ],
+      "answer": 1,
+      "explanation": "Wisdom applies knowledge to make strategic decisions under values and constraints (Slide 37)."
+    },
+    {
+      "id": "w6_q8",
+      "type": "mcq",
+      "question": "Which dimension of the Technology Management Framework focuses on user training?",
+      "choices": [
+        "Strategy",
+        "Technology",
+        "People",
+        "Governance"
+      ],
+      "answer": 2,
+      "explanation": "The People dimension ensures users are trained, capable, and willing to adopt new systems (Slide 35)."
+    },
+    {
+      "id": "w6_q9",
+      "type": "mcq",
+      "question": "Why are decision frameworks useful for technology managers?",
+      "choices": [
+        "They allow developers to compile code faster.",
+        "They structure decisions, reduce personal bias, and verify options systematically.",
+        "They automatically backup database files.",
+        "They replace the need for physical networks."
+      ],
+      "answer": 1,
+      "explanation": "Frameworks guide logical analysis and reduce decision errors in high-pressure environments."
+    },
+    {
+      "id": "w6_q10",
+      "type": "mcq",
+      "question": "What is a transaction processing system (TPS) output?",
+      "choices": [
+        "Rationing rules policies.",
+        "Daily receipt logs and transaction files.",
+        "Strategic crop allocation roadmaps.",
+        "Competitive marketing slide decks."
+      ],
+      "answer": 1,
+      "explanation": "TPS outputs are daily logs, receipts, and operational records."
+    },
+    {
+      "id": "w6_q11",
+      "type": "tf",
+      "question": "A Transaction Processing System is developer-facing and does not record operational trade records.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. TPS records daily routine logs at the baseline of operations (Slide 37)."
+    },
+    {
+      "id": "w6_q12",
+      "type": "tf",
+      "question": "According to the DIKW model, Wisdom is built directly from raw data without needing Information or Knowledge.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. Wisdom is the top of the pyramid, requiring structured information and knowledge processing."
+    },
+    {
+      "id": "w6_q13",
+      "type": "tf",
+      "question": "Technology management frameworks require aligning software choice with business process workflows.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Technology must align with processes to avoid operational failures (Slide 35)."
+    },
+    {
+      "id": "w6_q14",
+      "type": "tf",
+      "question": "GIGO means that garbage data entering a TPS results in garbage outputs from a DSS.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "True. Garbage In, Garbage Out; base metrics dictate analysis accuracy."
+    },
+    {
+      "id": "w6_q15",
+      "type": "tf",
+      "question": "A Decision Support System replaces managers by making operational choices automatically.",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "answer": 1,
+      "explanation": "False. DSS assists managers; the manager remains accountable for final decisions (Slide 26)."
+    },
+    {
+      "id": "w6_q16",
+      "type": "fitb",
+      "question": "The baseline system that records routine daily transactions is the __________ system.",
+      "answer": "tps",
+      "explanation": "TPS stands for Transaction Processing System."
+    },
+    {
+      "id": "w6_q17",
+      "type": "fitb",
+      "question": "The system that helps managers analyze trends and options is the __________ system.",
+      "answer": "dss",
+      "explanation": "DSS stands for Decision Support System."
+    },
+    {
+      "id": "w6_q18",
+      "type": "fitb",
+      "question": "In the DIKW pyramid, data is raw, whereas __________ adds meaning and context.",
+      "answer": "information",
+      "explanation": "Information organizes data points to reveal structures."
+    },
+    {
+      "id": "w6_q19",
+      "type": "fitb",
+      "question": "In the technology management framework, training clerks maps to the __________ dimension.",
+      "answer": "people",
+      "explanation": "The People dimension governs training, usability, and adoption."
+    },
+    {
+      "id": "w6_q20",
+      "type": "fitb",
+      "question": "GIGO stands for Garbage In, Garbage __________.",
+      "answer": "out",
+      "explanation": "If raw database inputs are wrong, reports outputs will be wrong."
+    },
+    {
+      "id": "w6_q21",
+      "type": "match",
+      "question": "Match the DIKW level with its case example:",
+      "left_items": [
+        "Data",
+        "Information",
+        "Knowledge",
+        "Wisdom"
+      ],
+      "right_items": [
+        "Log: 'Trader A bought 10g Gold'",
+        "Chart: 'Gold value up 5% today'",
+        "Insight: 'Monetary panic imminent'",
+        "Rationing rule set by leaders"
+      ],
+      "answer": {
+        "Data": "Log: 'Trader A bought 10g Gold'",
+        "Information": "Chart: 'Gold value up 5% today'",
+        "Knowledge": "Insight: 'Monetary panic imminent'",
+        "Wisdom": "Rationing rule set by leaders"
+      },
+      "explanation": "DIKW builds from raw logs (Data) to charts (Information) to insights (Knowledge) to actions (Wisdom)."
+    },
+    {
+      "id": "w6_q22",
+      "type": "match",
+      "question": "Match the framework dimension to its concern:",
+      "left_items": [
+        "Strategy",
+        "Processes",
+        "Governance"
+      ],
+      "right_items": [
+        "Long-term digital goals",
+        "Step-by-step trade workflows",
+        "Security audit controls"
+      ],
+      "answer": {
+        "Strategy": "Long-term digital goals",
+        "Processes": "Step-by-step trade workflows",
+        "Governance": "Security audit controls"
+      },
+      "explanation": "Strategy scopes goals; process diagrams workflows; governance enforces compliance."
+    },
+    {
+      "id": "w6_q23",
+      "type": "match",
+      "question": "Match the system level to the target user:",
+      "left_items": [
+        "TPS",
+        "DSS",
+        "Bare-Metal OS"
+      ],
+      "right_items": [
+        "Frontline trade clerks",
+        "Mid-level managers",
+        "System administrators"
+      ],
+      "answer": {
+        "TPS": "Frontline trade clerks",
+        "DSS": "Mid-level managers",
+        "Bare-Metal OS": "System administrators"
+      },
+      "explanation": "Clerks use transaction systems; managers use decision support; admins config OS layers."
+    },
+    {
+      "id": "w6_q24",
+      "type": "scenario",
+      "scenario": "A kingdom leader is checking a weekly DSS report. The report says food stocks are up 40%. Based on this, she exports 50 tons of grain to a neighbor. Within 2 days, the home settlement runs out of flour. It is discovered that clerks logged duplicate receipts at the trade posts.",
+      "question": "What system concept explains this error?",
+      "choices": [
+        "Poor compiler choices.",
+        "Garbage In, Garbage Out (GIGO) where incorrect TPS entries corrupted the DSS report.",
+        "Failing to install enough solar batteries.",
+        "A failure of the network mesh connections."
+      ],
+      "answer": 1,
+      "explanation": "TPS errors propagate into DSS reports, leading managers to make catastrophic decisions based on garbage data."
+    },
+    {
+      "id": "w6_q25",
+      "type": "scenario",
+      "scenario": "An IT team is deploying a new resource database. They buy the software and configure it. However, they do not create user guides or hold training for the clerks. On launch day, clerks do not know how to input numbers, causing massive delays and lines at depots.",
+      "question": "Which Technology Management Framework dimension did they neglect?",
+      "choices": [
+        "Strategy",
+        "Technology",
+        "People",
+        "Governance"
+      ],
+      "answer": 2,
+      "explanation": "Failing to train and align the People dimension causes technically sound systems to fail on launch day (Slide 35)."
+    }
+  ]
+}
