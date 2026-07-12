@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w05_match_1",
+    "type": "match",
+    "question": "Match the SDLC Models terms to their definitions:",
+    "left": [
+      "waterfall sequential",
+      "prototyping mockups",
+      "agile adaptability"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "waterfall sequential": "Definition A",
+      "prototyping mockups": "Definition B",
+      "agile adaptability": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of waterfall sequential, prototyping mockups, and agile adaptability."
+  },
+  {
+    "id": "w05_match_2",
+    "type": "match",
+    "question": "Match the SDLC Models terms to their definitions:",
+    "left": [
+      "waterfall sequential",
+      "prototyping mockups",
+      "agile adaptability"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "waterfall sequential": "Definition A",
+      "prototyping mockups": "Definition B",
+      "agile adaptability": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of waterfall sequential, prototyping mockups, and agile adaptability."
+  },
+  {
+    "id": "w05_match_3",
+    "type": "match",
+    "question": "Match the SDLC Models terms to their definitions:",
+    "left": [
+      "waterfall sequential",
+      "prototyping mockups",
+      "agile adaptability"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "waterfall sequential": "Definition A",
+      "prototyping mockups": "Definition B",
+      "agile adaptability": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of waterfall sequential, prototyping mockups, and agile adaptability."
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w11_match_1",
+    "type": "match",
+    "question": "Match the Buy vs Build terms to their definitions:",
+    "left": [
+      "outsourcing contracts",
+      "SaaS applications",
+      "proprietary code ownership"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "outsourcing contracts": "Definition A",
+      "SaaS applications": "Definition B",
+      "proprietary code ownership": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of outsourcing contracts, SaaS applications, and proprietary code ownership."
+  },
+  {
+    "id": "w11_match_2",
+    "type": "match",
+    "question": "Match the Buy vs Build terms to their definitions:",
+    "left": [
+      "outsourcing contracts",
+      "SaaS applications",
+      "proprietary code ownership"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "outsourcing contracts": "Definition A",
+      "SaaS applications": "Definition B",
+      "proprietary code ownership": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of outsourcing contracts, SaaS applications, and proprietary code ownership."
+  },
+  {
+    "id": "w11_match_3",
+    "type": "match",
+    "question": "Match the Buy vs Build terms to their definitions:",
+    "left": [
+      "outsourcing contracts",
+      "SaaS applications",
+      "proprietary code ownership"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "outsourcing contracts": "Definition A",
+      "SaaS applications": "Definition B",
+      "proprietary code ownership": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of outsourcing contracts, SaaS applications, and proprietary code ownership."
+  }
+]

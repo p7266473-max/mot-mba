@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w10_match_1",
+    "type": "match",
+    "question": "Match the Agile Projects terms to their definitions:",
+    "left": [
+      "sprint cycles",
+      "scrum backlogs",
+      "risk valuation checks"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "sprint cycles": "Definition A",
+      "scrum backlogs": "Definition B",
+      "risk valuation checks": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of sprint cycles, scrum backlogs, and risk valuation checks."
+  },
+  {
+    "id": "w10_match_2",
+    "type": "match",
+    "question": "Match the Agile Projects terms to their definitions:",
+    "left": [
+      "sprint cycles",
+      "scrum backlogs",
+      "risk valuation checks"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "sprint cycles": "Definition A",
+      "scrum backlogs": "Definition B",
+      "risk valuation checks": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of sprint cycles, scrum backlogs, and risk valuation checks."
+  },
+  {
+    "id": "w10_match_3",
+    "type": "match",
+    "question": "Match the Agile Projects terms to their definitions:",
+    "left": [
+      "sprint cycles",
+      "scrum backlogs",
+      "risk valuation checks"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "sprint cycles": "Definition A",
+      "scrum backlogs": "Definition B",
+      "risk valuation checks": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of sprint cycles, scrum backlogs, and risk valuation checks."
+  }
+]

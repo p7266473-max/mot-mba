@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w13_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Continuity & DR. They choose tools for RTO downtime metrics without gathering specifications for RPO data loss age. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for RPO data loss age immediately.",
+      "Bypass all audits and restart the RTO downtime metrics tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w13_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Continuity & DR. They choose tools for RTO downtime metrics without gathering specifications for RPO data loss age. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for RPO data loss age immediately.",
+      "Bypass all audits and restart the RTO downtime metrics tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w08_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Semiconductors & Cloud. They choose tools for silicon compute without gathering specifications for IaaS VM controls. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for IaaS VM controls immediately.",
+      "Bypass all audits and restart the silicon compute tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w08_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Semiconductors & Cloud. They choose tools for silicon compute without gathering specifications for IaaS VM controls. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for IaaS VM controls immediately.",
+      "Bypass all audits and restart the silicon compute tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

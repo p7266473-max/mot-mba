@@ -1,7 +1,7 @@
 import streamlit as st
-from typing import List, Dict, Any
+from typing import List
 from core.loader import QuestionModel
-from core.scorer import calculate_score
+from core.scorer import score
 
 def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
     # Setup state
@@ -32,7 +32,6 @@ def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
             st.warning(f"**📖 Case Context:**  \n{q.scenario}")
             
         if q.type in ["mcq", "tf", "scenario"]:
-            # Render Radio choices
             choices = q.choices if q.choices else []
             prev_ans = quiz_state["answers"].get(q.id)
             selected = st.radio(
@@ -47,16 +46,17 @@ def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
                 
             # Instant Feedback in Study Mode
             if mode.startswith("Study Mode") and selected is not None:
-                correct_choice = choices[q.answer] if isinstance(q.answer, int) else q.answer
-                if selected == correct_choice:
+                is_correct = score(q, selected)
+                if is_correct:
                     st.success("✅ **Correct!**")
                 else:
+                    correct_choice = choices[q.answer] if isinstance(q.answer, int) else q.answer
                     st.error(f"❌ **Incorrect.** Correct answer: **{correct_choice}**")
                 if q.explanation:
                     with st.expander("💡 View Explanation"):
                         st.info(q.explanation)
                         
-        elif q.type == "fitb":
+        elif q.type == "fill":
             prev_ans = quiz_state["answers"].get(q.id, "")
             text_val = st.text_input(
                 "Your Answer:",
@@ -67,7 +67,7 @@ def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
             quiz_state["answers"][q.id] = text_val
             
             if mode.startswith("Study Mode") and text_val.strip():
-                is_correct = (text_val.strip().lower() == str(q.answer).strip().lower())
+                is_correct = score(q, text_val)
                 if is_correct:
                     st.success("✅ **Correct!**")
                 else:
@@ -78,8 +78,8 @@ def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
                         
         elif q.type == "match":
             st.markdown("*Select the matching item for each option below:*")
-            left_items = q.left_items or []
-            right_items = q.right_items or []
+            left_items = q.left or []
+            right_items = q.right or []
             
             if q.id not in quiz_state["answers"]:
                 quiz_state["answers"][q.id] = {}
@@ -111,19 +111,16 @@ def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
                         quiz_state["answers"][q.id][item] = sel
                         
             if mode.startswith("Study Mode") and all(k in quiz_state["answers"][q.id] for k in left_items):
-                is_correct = True
                 user_match = quiz_state["answers"][q.id]
-                for l_key, r_val in q.answer.items():
-                    if user_match.get(l_key) != r_val:
-                        is_correct = False
-                        break
+                is_correct = score(q, user_match)
                 if is_correct:
                     st.success("✅ **Correct match!**")
                 else:
                     st.error("❌ **Incorrect matches.**")
                     st.markdown("**Correct Matching Pairings:**")
-                    for left_k, right_v in q.answer.items():
-                        st.markdown(f"- *{left_k}* ➔ **{right_v}**")
+                    if isinstance(q.answer, dict):
+                        for left_k, right_v in q.answer.items():
+                            st.markdown(f"- *{left_k}* ➔ **{right_v}**")
                 if q.explanation:
                     with st.expander("💡 View Explanation"):
                         st.info(q.explanation)
@@ -136,7 +133,30 @@ def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
                 quiz_state["submitted"] = True
                 st.rerun()
         else:
-            result = calculate_score(questions, quiz_state["answers"])
+            # Score calculations using score(q, response)
+            correct_count = 0
+            detailed_feedback = {}
+            for q in questions:
+                ans = quiz_state["answers"].get(q.id)
+                is_correct = score(q, ans)
+                if is_correct:
+                    correct_count += 1
+                detailed_feedback[q.id] = {
+                    "is_correct": is_correct,
+                    "correct_answer": q.answer,
+                    "user_answer": ans,
+                    "explanation": q.explanation
+                }
+                
+            total = len(questions)
+            percentage = (correct_count / total) * 100 if total > 0 else 0
+            result = {
+                "score": correct_count,
+                "total": total,
+                "percentage": percentage,
+                "feedback": detailed_feedback
+            }
+            
             st.markdown(f"### 📊 Score Result: **{result['score']} / {result['total']}** ({result['percentage']:.1f}%)")
             
             # Export buttons
@@ -165,9 +185,9 @@ def render_quiz_engine(week_key: str, questions: List[QuestionModel]):
             except Exception as e:
                 st.warning(f"Could not load exporter utilities: {e}")
             
-            if result['percentage'] >= 80.0:
+            if percentage >= 80.0:
                 st.success("🎉 **Superb!** Outstanding performance. You have mastered this week's lesson.")
-            elif result['percentage'] >= 50.0:
+            elif percentage >= 50.0:
                 st.warning("⚠️ **Pass.** Good effort. Review the explanations below.")
             else:
                 st.error("❌ **Revision Needed.** Go over the weekly reading materials.")

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w07_tf_1",
+    "type": "tf",
+    "question": "For TPS & DSS, is it true that DIKW pyramid data is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, DIKW pyramid data fits specific purposes."
+  },
+  {
+    "id": "w07_tf_2",
+    "type": "tf",
+    "question": "For TPS & DSS, is it true that transaction processing is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, transaction processing fits specific purposes."
+  },
+  {
+    "id": "w07_tf_3",
+    "type": "tf",
+    "question": "For TPS & DSS, is it true that DIKW pyramid data is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, DIKW pyramid data fits specific purposes."
+  },
+  {
+    "id": "w07_tf_4",
+    "type": "tf",
+    "question": "For TPS & DSS, is it true that transaction processing is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, transaction processing fits specific purposes."
+  },
+  {
+    "id": "w07_tf_5",
+    "type": "tf",
+    "question": "For TPS & DSS, is it true that DIKW pyramid data is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, DIKW pyramid data fits specific purposes."
+  }
+]

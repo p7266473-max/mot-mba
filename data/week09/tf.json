@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w09_tf_1",
+    "type": "tf",
+    "question": "For Portfolio Management, is it true that lifecycle backlog is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, lifecycle backlog fits specific purposes."
+  },
+  {
+    "id": "w09_tf_2",
+    "type": "tf",
+    "question": "For Portfolio Management, is it true that APM assets is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, APM assets fits specific purposes."
+  },
+  {
+    "id": "w09_tf_3",
+    "type": "tf",
+    "question": "For Portfolio Management, is it true that lifecycle backlog is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, lifecycle backlog fits specific purposes."
+  },
+  {
+    "id": "w09_tf_4",
+    "type": "tf",
+    "question": "For Portfolio Management, is it true that APM assets is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, APM assets fits specific purposes."
+  },
+  {
+    "id": "w09_tf_5",
+    "type": "tf",
+    "question": "For Portfolio Management, is it true that lifecycle backlog is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, lifecycle backlog fits specific purposes."
+  }
+]

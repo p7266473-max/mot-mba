@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w01_tf_1",
+    "type": "tf",
+    "question": "For Systems Thinking, is it true that System boundaries is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, System boundaries fits specific purposes."
+  },
+  {
+    "id": "w01_tf_2",
+    "type": "tf",
+    "question": "For Systems Thinking, is it true that balancing loop is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, balancing loop fits specific purposes."
+  },
+  {
+    "id": "w01_tf_3",
+    "type": "tf",
+    "question": "For Systems Thinking, is it true that System boundaries is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, System boundaries fits specific purposes."
+  },
+  {
+    "id": "w01_tf_4",
+    "type": "tf",
+    "question": "For Systems Thinking, is it true that balancing loop is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, balancing loop fits specific purposes."
+  },
+  {
+    "id": "w01_tf_5",
+    "type": "tf",
+    "question": "For Systems Thinking, is it true that System boundaries is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, System boundaries fits specific purposes."
+  }
+]

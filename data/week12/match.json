@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w12_match_1",
+    "type": "match",
+    "question": "Match the E-Business Networks terms to their definitions:",
+    "left": [
+      "intranet employees",
+      "extranet suppliers",
+      "cloud governance metrics"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "intranet employees": "Definition A",
+      "extranet suppliers": "Definition B",
+      "cloud governance metrics": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of intranet employees, extranet suppliers, and cloud governance metrics."
+  },
+  {
+    "id": "w12_match_2",
+    "type": "match",
+    "question": "Match the E-Business Networks terms to their definitions:",
+    "left": [
+      "intranet employees",
+      "extranet suppliers",
+      "cloud governance metrics"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "intranet employees": "Definition A",
+      "extranet suppliers": "Definition B",
+      "cloud governance metrics": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of intranet employees, extranet suppliers, and cloud governance metrics."
+  },
+  {
+    "id": "w12_match_3",
+    "type": "match",
+    "question": "Match the E-Business Networks terms to their definitions:",
+    "left": [
+      "intranet employees",
+      "extranet suppliers",
+      "cloud governance metrics"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "intranet employees": "Definition A",
+      "extranet suppliers": "Definition B",
+      "cloud governance metrics": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of intranet employees, extranet suppliers, and cloud governance metrics."
+  }
+]

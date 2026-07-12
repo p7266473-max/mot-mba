@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w08_match_1",
+    "type": "match",
+    "question": "Match the Semiconductors & Cloud terms to their definitions:",
+    "left": [
+      "silicon compute",
+      "IaaS VM controls",
+      "PaaS runtimes"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "silicon compute": "Definition A",
+      "IaaS VM controls": "Definition B",
+      "PaaS runtimes": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of silicon compute, IaaS VM controls, and PaaS runtimes."
+  },
+  {
+    "id": "w08_match_2",
+    "type": "match",
+    "question": "Match the Semiconductors & Cloud terms to their definitions:",
+    "left": [
+      "silicon compute",
+      "IaaS VM controls",
+      "PaaS runtimes"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "silicon compute": "Definition A",
+      "IaaS VM controls": "Definition B",
+      "PaaS runtimes": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of silicon compute, IaaS VM controls, and PaaS runtimes."
+  },
+  {
+    "id": "w08_match_3",
+    "type": "match",
+    "question": "Match the Semiconductors & Cloud terms to their definitions:",
+    "left": [
+      "silicon compute",
+      "IaaS VM controls",
+      "PaaS runtimes"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "silicon compute": "Definition A",
+      "IaaS VM controls": "Definition B",
+      "PaaS runtimes": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of silicon compute, IaaS VM controls, and PaaS runtimes."
+  }
+]

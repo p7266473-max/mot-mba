@@ -1,0 +1,132 @@
+[
+  {
+    "id": "w08_mcq_1",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding IaaS VM controls?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using IaaS VM controls to solve SaaS web platforms."
+  },
+  {
+    "id": "w08_mcq_2",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding silicon compute?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using silicon compute to solve PaaS runtimes."
+  },
+  {
+    "id": "w08_mcq_3",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding IaaS VM controls?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using IaaS VM controls to solve SaaS web platforms."
+  },
+  {
+    "id": "w08_mcq_4",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding silicon compute?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using silicon compute to solve PaaS runtimes."
+  },
+  {
+    "id": "w08_mcq_5",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding IaaS VM controls?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using IaaS VM controls to solve SaaS web platforms."
+  },
+  {
+    "id": "w08_mcq_6",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding silicon compute?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using silicon compute to solve PaaS runtimes."
+  },
+  {
+    "id": "w08_mcq_7",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding IaaS VM controls?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using IaaS VM controls to solve SaaS web platforms."
+  },
+  {
+    "id": "w08_mcq_8",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding silicon compute?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using silicon compute to solve PaaS runtimes."
+  },
+  {
+    "id": "w08_mcq_9",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding IaaS VM controls?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using IaaS VM controls to solve SaaS web platforms."
+  },
+  {
+    "id": "w08_mcq_10",
+    "type": "mcq",
+    "question": "In context of Semiconductors & Cloud, which is correct regarding silicon compute?",
+    "choices": [
+      "It is a core concept that optimizes PaaS runtimes.",
+      "It acts as a primary operational method to handle SaaS web platforms.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using silicon compute to solve PaaS runtimes."
+  }
+]

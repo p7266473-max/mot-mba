@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w07_match_1",
+    "type": "match",
+    "question": "Match the TPS & DSS terms to their definitions:",
+    "left": [
+      "transaction processing",
+      "decision support",
+      "DIKW pyramid data"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "transaction processing": "Definition A",
+      "decision support": "Definition B",
+      "DIKW pyramid data": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of transaction processing, decision support, and DIKW pyramid data."
+  },
+  {
+    "id": "w07_match_2",
+    "type": "match",
+    "question": "Match the TPS & DSS terms to their definitions:",
+    "left": [
+      "transaction processing",
+      "decision support",
+      "DIKW pyramid data"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "transaction processing": "Definition A",
+      "decision support": "Definition B",
+      "DIKW pyramid data": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of transaction processing, decision support, and DIKW pyramid data."
+  },
+  {
+    "id": "w07_match_3",
+    "type": "match",
+    "question": "Match the TPS & DSS terms to their definitions:",
+    "left": [
+      "transaction processing",
+      "decision support",
+      "DIKW pyramid data"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "transaction processing": "Definition A",
+      "decision support": "Definition B",
+      "DIKW pyramid data": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of transaction processing, decision support, and DIKW pyramid data."
+  }
+]

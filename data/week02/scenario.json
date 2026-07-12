@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w02_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Tech Planning. They choose tools for technology-first thinking without gathering specifications for requirements analysis. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for requirements analysis immediately.",
+      "Bypass all audits and restart the technology-first thinking tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w02_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Tech Planning. They choose tools for technology-first thinking without gathering specifications for requirements analysis. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for requirements analysis immediately.",
+      "Bypass all audits and restart the technology-first thinking tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

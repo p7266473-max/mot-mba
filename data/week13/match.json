@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w13_match_1",
+    "type": "match",
+    "question": "Match the Continuity & DR terms to their definitions:",
+    "left": [
+      "RTO downtime metrics",
+      "RPO data loss age",
+      "business continuity planning"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "RTO downtime metrics": "Definition A",
+      "RPO data loss age": "Definition B",
+      "business continuity planning": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of RTO downtime metrics, RPO data loss age, and business continuity planning."
+  },
+  {
+    "id": "w13_match_2",
+    "type": "match",
+    "question": "Match the Continuity & DR terms to their definitions:",
+    "left": [
+      "RTO downtime metrics",
+      "RPO data loss age",
+      "business continuity planning"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "RTO downtime metrics": "Definition A",
+      "RPO data loss age": "Definition B",
+      "business continuity planning": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of RTO downtime metrics, RPO data loss age, and business continuity planning."
+  },
+  {
+    "id": "w13_match_3",
+    "type": "match",
+    "question": "Match the Continuity & DR terms to their definitions:",
+    "left": [
+      "RTO downtime metrics",
+      "RPO data loss age",
+      "business continuity planning"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "RTO downtime metrics": "Definition A",
+      "RPO data loss age": "Definition B",
+      "business continuity planning": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of RTO downtime metrics, RPO data loss age, and business continuity planning."
+  }
+]

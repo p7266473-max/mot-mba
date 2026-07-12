@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w14_tf_1",
+    "type": "tf",
+    "question": "For Systems Review, is it true that governance frameworks is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, governance frameworks fits specific purposes."
+  },
+  {
+    "id": "w14_tf_2",
+    "type": "tf",
+    "question": "For Systems Review, is it true that integrated systems is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, integrated systems fits specific purposes."
+  },
+  {
+    "id": "w14_tf_3",
+    "type": "tf",
+    "question": "For Systems Review, is it true that governance frameworks is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, governance frameworks fits specific purposes."
+  },
+  {
+    "id": "w14_tf_4",
+    "type": "tf",
+    "question": "For Systems Review, is it true that integrated systems is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, integrated systems fits specific purposes."
+  },
+  {
+    "id": "w14_tf_5",
+    "type": "tf",
+    "question": "For Systems Review, is it true that governance frameworks is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, governance frameworks fits specific purposes."
+  }
+]

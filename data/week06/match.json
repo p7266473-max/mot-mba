@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w06_match_1",
+    "type": "match",
+    "question": "Match the IT Frameworks terms to their definitions:",
+    "left": [
+      "technology integration",
+      "process workflows",
+      "people dimension"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "technology integration": "Definition A",
+      "process workflows": "Definition B",
+      "people dimension": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of technology integration, process workflows, and people dimension."
+  },
+  {
+    "id": "w06_match_2",
+    "type": "match",
+    "question": "Match the IT Frameworks terms to their definitions:",
+    "left": [
+      "technology integration",
+      "process workflows",
+      "people dimension"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "technology integration": "Definition A",
+      "process workflows": "Definition B",
+      "people dimension": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of technology integration, process workflows, and people dimension."
+  },
+  {
+    "id": "w06_match_3",
+    "type": "match",
+    "question": "Match the IT Frameworks terms to their definitions:",
+    "left": [
+      "technology integration",
+      "process workflows",
+      "people dimension"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "technology integration": "Definition A",
+      "process workflows": "Definition B",
+      "people dimension": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of technology integration, process workflows, and people dimension."
+  }
+]

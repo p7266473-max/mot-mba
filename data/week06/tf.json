@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w06_tf_1",
+    "type": "tf",
+    "question": "For IT Frameworks, is it true that people dimension is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, people dimension fits specific purposes."
+  },
+  {
+    "id": "w06_tf_2",
+    "type": "tf",
+    "question": "For IT Frameworks, is it true that technology integration is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, technology integration fits specific purposes."
+  },
+  {
+    "id": "w06_tf_3",
+    "type": "tf",
+    "question": "For IT Frameworks, is it true that people dimension is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, people dimension fits specific purposes."
+  },
+  {
+    "id": "w06_tf_4",
+    "type": "tf",
+    "question": "For IT Frameworks, is it true that technology integration is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, technology integration fits specific purposes."
+  },
+  {
+    "id": "w06_tf_5",
+    "type": "tf",
+    "question": "For IT Frameworks, is it true that people dimension is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, people dimension fits specific purposes."
+  }
+]

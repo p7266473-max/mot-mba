@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w13_tf_1",
+    "type": "tf",
+    "question": "For Continuity & DR, is it true that business continuity planning is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, business continuity planning fits specific purposes."
+  },
+  {
+    "id": "w13_tf_2",
+    "type": "tf",
+    "question": "For Continuity & DR, is it true that RTO downtime metrics is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, RTO downtime metrics fits specific purposes."
+  },
+  {
+    "id": "w13_tf_3",
+    "type": "tf",
+    "question": "For Continuity & DR, is it true that business continuity planning is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, business continuity planning fits specific purposes."
+  },
+  {
+    "id": "w13_tf_4",
+    "type": "tf",
+    "question": "For Continuity & DR, is it true that RTO downtime metrics is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, RTO downtime metrics fits specific purposes."
+  },
+  {
+    "id": "w13_tf_5",
+    "type": "tf",
+    "question": "For Continuity & DR, is it true that business continuity planning is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, business continuity planning fits specific purposes."
+  }
+]

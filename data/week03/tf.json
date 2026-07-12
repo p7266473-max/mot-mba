@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w03_tf_1",
+    "type": "tf",
+    "question": "For System Design, is it true that transformation roadmap is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, transformation roadmap fits specific purposes."
+  },
+  {
+    "id": "w03_tf_2",
+    "type": "tf",
+    "question": "For System Design, is it true that conceptual design is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, conceptual design fits specific purposes."
+  },
+  {
+    "id": "w03_tf_3",
+    "type": "tf",
+    "question": "For System Design, is it true that transformation roadmap is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, transformation roadmap fits specific purposes."
+  },
+  {
+    "id": "w03_tf_4",
+    "type": "tf",
+    "question": "For System Design, is it true that conceptual design is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, conceptual design fits specific purposes."
+  },
+  {
+    "id": "w03_tf_5",
+    "type": "tf",
+    "question": "For System Design, is it true that transformation roadmap is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, transformation roadmap fits specific purposes."
+  }
+]

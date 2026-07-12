@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w08_tf_1",
+    "type": "tf",
+    "question": "For Semiconductors & Cloud, is it true that PaaS runtimes is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, PaaS runtimes fits specific purposes."
+  },
+  {
+    "id": "w08_tf_2",
+    "type": "tf",
+    "question": "For Semiconductors & Cloud, is it true that silicon compute is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, silicon compute fits specific purposes."
+  },
+  {
+    "id": "w08_tf_3",
+    "type": "tf",
+    "question": "For Semiconductors & Cloud, is it true that PaaS runtimes is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, PaaS runtimes fits specific purposes."
+  },
+  {
+    "id": "w08_tf_4",
+    "type": "tf",
+    "question": "For Semiconductors & Cloud, is it true that silicon compute is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, silicon compute fits specific purposes."
+  },
+  {
+    "id": "w08_tf_5",
+    "type": "tf",
+    "question": "For Semiconductors & Cloud, is it true that PaaS runtimes is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, PaaS runtimes fits specific purposes."
+  }
+]

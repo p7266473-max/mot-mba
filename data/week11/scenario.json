@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w11_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Buy vs Build. They choose tools for outsourcing contracts without gathering specifications for SaaS applications. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for SaaS applications immediately.",
+      "Bypass all audits and restart the outsourcing contracts tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w11_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Buy vs Build. They choose tools for outsourcing contracts without gathering specifications for SaaS applications. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for SaaS applications immediately.",
+      "Bypass all audits and restart the outsourcing contracts tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

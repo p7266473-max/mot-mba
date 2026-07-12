@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w11_tf_1",
+    "type": "tf",
+    "question": "For Buy vs Build, is it true that proprietary code ownership is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, proprietary code ownership fits specific purposes."
+  },
+  {
+    "id": "w11_tf_2",
+    "type": "tf",
+    "question": "For Buy vs Build, is it true that outsourcing contracts is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, outsourcing contracts fits specific purposes."
+  },
+  {
+    "id": "w11_tf_3",
+    "type": "tf",
+    "question": "For Buy vs Build, is it true that proprietary code ownership is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, proprietary code ownership fits specific purposes."
+  },
+  {
+    "id": "w11_tf_4",
+    "type": "tf",
+    "question": "For Buy vs Build, is it true that outsourcing contracts is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, outsourcing contracts fits specific purposes."
+  },
+  {
+    "id": "w11_tf_5",
+    "type": "tf",
+    "question": "For Buy vs Build, is it true that proprietary code ownership is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, proprietary code ownership fits specific purposes."
+  }
+]

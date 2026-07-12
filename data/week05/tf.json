@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w05_tf_1",
+    "type": "tf",
+    "question": "For SDLC Models, is it true that agile adaptability is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, agile adaptability fits specific purposes."
+  },
+  {
+    "id": "w05_tf_2",
+    "type": "tf",
+    "question": "For SDLC Models, is it true that waterfall sequential is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, waterfall sequential fits specific purposes."
+  },
+  {
+    "id": "w05_tf_3",
+    "type": "tf",
+    "question": "For SDLC Models, is it true that agile adaptability is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, agile adaptability fits specific purposes."
+  },
+  {
+    "id": "w05_tf_4",
+    "type": "tf",
+    "question": "For SDLC Models, is it true that waterfall sequential is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, waterfall sequential fits specific purposes."
+  },
+  {
+    "id": "w05_tf_5",
+    "type": "tf",
+    "question": "For SDLC Models, is it true that agile adaptability is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, agile adaptability fits specific purposes."
+  }
+]

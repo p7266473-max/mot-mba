@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w02_tf_1",
+    "type": "tf",
+    "question": "For Tech Planning, is it true that functional requirement is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, functional requirement fits specific purposes."
+  },
+  {
+    "id": "w02_tf_2",
+    "type": "tf",
+    "question": "For Tech Planning, is it true that technology-first thinking is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, technology-first thinking fits specific purposes."
+  },
+  {
+    "id": "w02_tf_3",
+    "type": "tf",
+    "question": "For Tech Planning, is it true that functional requirement is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, functional requirement fits specific purposes."
+  },
+  {
+    "id": "w02_tf_4",
+    "type": "tf",
+    "question": "For Tech Planning, is it true that technology-first thinking is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, technology-first thinking fits specific purposes."
+  },
+  {
+    "id": "w02_tf_5",
+    "type": "tf",
+    "question": "For Tech Planning, is it true that functional requirement is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, functional requirement fits specific purposes."
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "w13_mcq_1",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RPO data loss age?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using RPO data loss age to solve disaster recovery logs."
+  },
+  {
+    "id": "w13_mcq_2",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RTO downtime metrics?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using RTO downtime metrics to solve business continuity planning."
+  },
+  {
+    "id": "w13_mcq_3",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RPO data loss age?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using RPO data loss age to solve disaster recovery logs."
+  },
+  {
+    "id": "w13_mcq_4",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RTO downtime metrics?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using RTO downtime metrics to solve business continuity planning."
+  },
+  {
+    "id": "w13_mcq_5",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RPO data loss age?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using RPO data loss age to solve disaster recovery logs."
+  },
+  {
+    "id": "w13_mcq_6",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RTO downtime metrics?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using RTO downtime metrics to solve business continuity planning."
+  },
+  {
+    "id": "w13_mcq_7",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RPO data loss age?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using RPO data loss age to solve disaster recovery logs."
+  },
+  {
+    "id": "w13_mcq_8",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RTO downtime metrics?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using RTO downtime metrics to solve business continuity planning."
+  },
+  {
+    "id": "w13_mcq_9",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RPO data loss age?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using RPO data loss age to solve disaster recovery logs."
+  },
+  {
+    "id": "w13_mcq_10",
+    "type": "mcq",
+    "question": "In context of Continuity & DR, which is correct regarding RTO downtime metrics?",
+    "choices": [
+      "It is a core concept that optimizes business continuity planning.",
+      "It acts as a primary operational method to handle disaster recovery logs.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using RTO downtime metrics to solve business continuity planning."
+  }
+]

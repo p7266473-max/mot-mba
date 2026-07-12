@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w03_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for System Design. They choose tools for conceptual design without gathering specifications for technical design. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for technical design immediately.",
+      "Bypass all audits and restart the conceptual design tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w03_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for System Design. They choose tools for conceptual design without gathering specifications for technical design. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for technical design immediately.",
+      "Bypass all audits and restart the conceptual design tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w01_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Systems Thinking. They choose tools for balancing loop without gathering specifications for reinforcing loop. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for reinforcing loop immediately.",
+      "Bypass all audits and restart the balancing loop tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w01_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Systems Thinking. They choose tools for balancing loop without gathering specifications for reinforcing loop. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for reinforcing loop immediately.",
+      "Bypass all audits and restart the balancing loop tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w02_match_1",
+    "type": "match",
+    "question": "Match the Tech Planning terms to their definitions:",
+    "left": [
+      "technology-first thinking",
+      "requirements analysis",
+      "functional requirement"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "technology-first thinking": "Definition A",
+      "requirements analysis": "Definition B",
+      "functional requirement": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of technology-first thinking, requirements analysis, and functional requirement."
+  },
+  {
+    "id": "w02_match_2",
+    "type": "match",
+    "question": "Match the Tech Planning terms to their definitions:",
+    "left": [
+      "technology-first thinking",
+      "requirements analysis",
+      "functional requirement"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "technology-first thinking": "Definition A",
+      "requirements analysis": "Definition B",
+      "functional requirement": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of technology-first thinking, requirements analysis, and functional requirement."
+  },
+  {
+    "id": "w02_match_3",
+    "type": "match",
+    "question": "Match the Tech Planning terms to their definitions:",
+    "left": [
+      "technology-first thinking",
+      "requirements analysis",
+      "functional requirement"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "technology-first thinking": "Definition A",
+      "requirements analysis": "Definition B",
+      "functional requirement": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of technology-first thinking, requirements analysis, and functional requirement."
+  }
+]

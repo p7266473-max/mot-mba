@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w09_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Portfolio Management. They choose tools for APM assets without gathering specifications for cost-of-change curve. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for cost-of-change curve immediately.",
+      "Bypass all audits and restart the APM assets tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w09_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Portfolio Management. They choose tools for APM assets without gathering specifications for cost-of-change curve. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for cost-of-change curve immediately.",
+      "Bypass all audits and restart the APM assets tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

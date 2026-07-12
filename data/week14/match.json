@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w14_match_1",
+    "type": "match",
+    "question": "Match the Systems Review terms to their definitions:",
+    "left": [
+      "integrated systems",
+      "digital transformation",
+      "governance frameworks"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "integrated systems": "Definition A",
+      "digital transformation": "Definition B",
+      "governance frameworks": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of integrated systems, digital transformation, and governance frameworks."
+  },
+  {
+    "id": "w14_match_2",
+    "type": "match",
+    "question": "Match the Systems Review terms to their definitions:",
+    "left": [
+      "integrated systems",
+      "digital transformation",
+      "governance frameworks"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "integrated systems": "Definition A",
+      "digital transformation": "Definition B",
+      "governance frameworks": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of integrated systems, digital transformation, and governance frameworks."
+  },
+  {
+    "id": "w14_match_3",
+    "type": "match",
+    "question": "Match the Systems Review terms to their definitions:",
+    "left": [
+      "integrated systems",
+      "digital transformation",
+      "governance frameworks"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "integrated systems": "Definition A",
+      "digital transformation": "Definition B",
+      "governance frameworks": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of integrated systems, digital transformation, and governance frameworks."
+  }
+]

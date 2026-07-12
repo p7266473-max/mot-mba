@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w10_tf_1",
+    "type": "tf",
+    "question": "For Agile Projects, is it true that risk valuation checks is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, risk valuation checks fits specific purposes."
+  },
+  {
+    "id": "w10_tf_2",
+    "type": "tf",
+    "question": "For Agile Projects, is it true that sprint cycles is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, sprint cycles fits specific purposes."
+  },
+  {
+    "id": "w10_tf_3",
+    "type": "tf",
+    "question": "For Agile Projects, is it true that risk valuation checks is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, risk valuation checks fits specific purposes."
+  },
+  {
+    "id": "w10_tf_4",
+    "type": "tf",
+    "question": "For Agile Projects, is it true that sprint cycles is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, sprint cycles fits specific purposes."
+  },
+  {
+    "id": "w10_tf_5",
+    "type": "tf",
+    "question": "For Agile Projects, is it true that risk valuation checks is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, risk valuation checks fits specific purposes."
+  }
+]

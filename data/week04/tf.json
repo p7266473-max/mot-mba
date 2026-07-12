@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w04_tf_1",
+    "type": "tf",
+    "question": "For Ethics & Privacy, is it true that workplace monitoring is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, workplace monitoring fits specific purposes."
+  },
+  {
+    "id": "w04_tf_2",
+    "type": "tf",
+    "question": "For Ethics & Privacy, is it true that data protection is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, data protection fits specific purposes."
+  },
+  {
+    "id": "w04_tf_3",
+    "type": "tf",
+    "question": "For Ethics & Privacy, is it true that workplace monitoring is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, workplace monitoring fits specific purposes."
+  },
+  {
+    "id": "w04_tf_4",
+    "type": "tf",
+    "question": "For Ethics & Privacy, is it true that data protection is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, data protection fits specific purposes."
+  },
+  {
+    "id": "w04_tf_5",
+    "type": "tf",
+    "question": "For Ethics & Privacy, is it true that workplace monitoring is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, workplace monitoring fits specific purposes."
+  }
+]

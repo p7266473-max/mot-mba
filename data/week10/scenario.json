@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w10_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Agile Projects. They choose tools for sprint cycles without gathering specifications for scrum backlogs. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for scrum backlogs immediately.",
+      "Bypass all audits and restart the sprint cycles tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w10_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Agile Projects. They choose tools for sprint cycles without gathering specifications for scrum backlogs. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for scrum backlogs immediately.",
+      "Bypass all audits and restart the sprint cycles tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]

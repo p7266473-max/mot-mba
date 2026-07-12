@@ -1,0 +1,37 @@
+[
+  {
+    "id": "w12_tf_1",
+    "type": "tf",
+    "question": "For E-Business Networks, is it true that cloud governance metrics is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, cloud governance metrics fits specific purposes."
+  },
+  {
+    "id": "w12_tf_2",
+    "type": "tf",
+    "question": "For E-Business Networks, is it true that intranet employees is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, intranet employees fits specific purposes."
+  },
+  {
+    "id": "w12_tf_3",
+    "type": "tf",
+    "question": "For E-Business Networks, is it true that cloud governance metrics is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, cloud governance metrics fits specific purposes."
+  },
+  {
+    "id": "w12_tf_4",
+    "type": "tf",
+    "question": "For E-Business Networks, is it true that intranet employees is always the best solution?",
+    "answer": false,
+    "explanation": "Depending on requirements and constraints, intranet employees fits specific purposes."
+  },
+  {
+    "id": "w12_tf_5",
+    "type": "tf",
+    "question": "For E-Business Networks, is it true that cloud governance metrics is always the best solution?",
+    "answer": true,
+    "explanation": "Depending on requirements and constraints, cloud governance metrics fits specific purposes."
+  }
+]

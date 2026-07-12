@@ -1,0 +1,132 @@
+[
+  {
+    "id": "w11_mcq_1",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding SaaS applications?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using SaaS applications to solve custom database design."
+  },
+  {
+    "id": "w11_mcq_2",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding outsourcing contracts?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using outsourcing contracts to solve proprietary code ownership."
+  },
+  {
+    "id": "w11_mcq_3",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding SaaS applications?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using SaaS applications to solve custom database design."
+  },
+  {
+    "id": "w11_mcq_4",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding outsourcing contracts?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using outsourcing contracts to solve proprietary code ownership."
+  },
+  {
+    "id": "w11_mcq_5",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding SaaS applications?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using SaaS applications to solve custom database design."
+  },
+  {
+    "id": "w11_mcq_6",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding outsourcing contracts?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using outsourcing contracts to solve proprietary code ownership."
+  },
+  {
+    "id": "w11_mcq_7",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding SaaS applications?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using SaaS applications to solve custom database design."
+  },
+  {
+    "id": "w11_mcq_8",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding outsourcing contracts?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using outsourcing contracts to solve proprietary code ownership."
+  },
+  {
+    "id": "w11_mcq_9",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding SaaS applications?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 1,
+    "explanation": "Syllabus focuses heavily on using SaaS applications to solve custom database design."
+  },
+  {
+    "id": "w11_mcq_10",
+    "type": "mcq",
+    "question": "In context of Buy vs Build, which is correct regarding outsourcing contracts?",
+    "choices": [
+      "It is a core concept that optimizes proprietary code ownership.",
+      "It acts as a primary operational method to handle custom database design.",
+      "It represents an outdated framework that should be bypassed.",
+      "It has no relevance to technology planning."
+    ],
+    "answer": 0,
+    "explanation": "Syllabus focuses heavily on using outsourcing contracts to solve proprietary code ownership."
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "w09_match_1",
+    "type": "match",
+    "question": "Match the Portfolio Management terms to their definitions:",
+    "left": [
+      "APM assets",
+      "cost-of-change curve",
+      "lifecycle backlog"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "APM assets": "Definition A",
+      "cost-of-change curve": "Definition B",
+      "lifecycle backlog": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of APM assets, cost-of-change curve, and lifecycle backlog."
+  },
+  {
+    "id": "w09_match_2",
+    "type": "match",
+    "question": "Match the Portfolio Management terms to their definitions:",
+    "left": [
+      "APM assets",
+      "cost-of-change curve",
+      "lifecycle backlog"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "APM assets": "Definition A",
+      "cost-of-change curve": "Definition B",
+      "lifecycle backlog": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of APM assets, cost-of-change curve, and lifecycle backlog."
+  },
+  {
+    "id": "w09_match_3",
+    "type": "match",
+    "question": "Match the Portfolio Management terms to their definitions:",
+    "left": [
+      "APM assets",
+      "cost-of-change curve",
+      "lifecycle backlog"
+    ],
+    "right": [
+      "Definition A",
+      "Definition B",
+      "Definition C"
+    ],
+    "answer": {
+      "APM assets": "Definition A",
+      "cost-of-change curve": "Definition B",
+      "lifecycle backlog": "Definition C"
+    },
+    "explanation": "Matches are configured based on standard syllabus descriptions of APM assets, cost-of-change curve, and lifecycle backlog."
+  }
+]

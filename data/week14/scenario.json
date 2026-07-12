@@ -1,0 +1,28 @@
+[
+  {
+    "id": "w14_scenario_1",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Systems Review. They choose tools for integrated systems without gathering specifications for digital transformation. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for digital transformation immediately.",
+      "Bypass all audits and restart the integrated systems tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  },
+  {
+    "id": "w14_scenario_2",
+    "type": "scenario",
+    "scenario": "An IT manager in a kingdom attempts to deploy a system for Systems Review. They choose tools for integrated systems without gathering specifications for digital transformation. The database fails.",
+    "question": "What is the primary recovery step?",
+    "choices": [
+      "Establish clear requirements for digital transformation immediately.",
+      "Bypass all audits and restart the integrated systems tools.",
+      "Hurry the developers to code a new layout."
+    ],
+    "answer": 0,
+    "explanation": "Scoping requirements prevents expensive configuration issues."
+  }
+]
