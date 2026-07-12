@@ -44,35 +44,27 @@ with st.sidebar:
 st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle-text">Practice Quizzes</div>', unsafe_allow_html=True)
 
-# 7 Session Tabs renamed to Weeks
-tab_titles = [
-    "Weeks 1 & 2",
-    "Weeks 3 & 4",
-    "Weeks 5 & 6",
-    "Weeks 7 & 8",
-    "Weeks 9 & 10",
-    "Weeks 11 & 12",
-    "Week 13"
-]
+# 7 Week Tabs
+tab_titles = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7"]
 tabs = st.tabs(tab_titles)
 
 with tabs[0]:
-    render_quiz("Weeks 1 & 2", SESSION_1_QUIZ)
+    render_quiz("Week 1", SESSION_1_QUIZ)
 
 with tabs[1]:
-    render_quiz("Weeks 3 & 4", SESSION_2_QUIZ)
+    render_quiz("Week 2", SESSION_2_QUIZ)
 
 with tabs[2]:
-    render_quiz("Weeks 5 & 6", SESSION_3_QUIZ)
+    render_quiz("Week 3", SESSION_3_QUIZ)
 
 with tabs[3]:
-    render_quiz("Weeks 7 & 8", SESSION_4_QUIZ)
+    render_quiz("Week 4", SESSION_4_QUIZ)
 
 with tabs[4]:
-    render_quiz("Weeks 9 & 10", SESSION_5_QUIZ)
+    render_quiz("Week 5", SESSION_5_QUIZ)
 
 with tabs[5]:
-    render_quiz("Weeks 11 & 12", SESSION_6_QUIZ)
+    render_quiz("Week 6", SESSION_6_QUIZ)
 
 with tabs[6]:
-    render_quiz("Week 13", SESSION_7_QUIZ)
+    render_quiz("Week 7", SESSION_7_QUIZ)
