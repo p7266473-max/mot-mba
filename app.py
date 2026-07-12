@@ -45,7 +45,7 @@ st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>',
 st.markdown('<div class="subtitle-text">Practice Quizzes</div>', unsafe_allow_html=True)
 
 # 7 Week Tabs
-tab_titles = ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7"]
+tab_titles = ["Week 1 Lesson Plan", "Week 2 Lesson Plan", "Week 3 Lesson Plan", "Week 4 Lesson Plan", "Week 5 Lesson Plan", "Week 6 Lesson Plan", "Week 7 Lesson Plan"]
 tabs = st.tabs(tab_titles)
 
 with tabs[0]:
