@@ -1,8 +1,13 @@
+import streamlit as st
 import sys
 import subprocess
+import pandas as pd
+import hashlib
+import json
+import os
 
 def install_missing_packages():
-    required = ["streamlit", "google-genai", "google-generativeai", "pandas"]
+    required = ["google-genai", "google-generativeai"]
     for pkg in required:
         try:
             if pkg == "google-genai":
@@ -14,13 +19,10 @@ def install_missing_packages():
         except ImportError:
             subprocess.run([sys.executable, "-m", "pip", "install", pkg], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-install_missing_packages()
+if "packages_installed" not in st.session_state:
+    install_missing_packages()
+    st.session_state["packages_installed"] = True
 
-import streamlit as st
-import pandas as pd
-import hashlib
-import json
-import os
 
 
 # Page configuration
