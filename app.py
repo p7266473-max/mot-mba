@@ -1,8 +1,11 @@
 import streamlit as st
+import pandas as pd
+import hashlib
+import time
 
 # Page configuration
 st.set_page_config(
-    page_title="MOT MBA Lesson Plan Portal",
+    page_title="MOT MBA Lesson Plan & Interactive Portal",
     page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -11,7 +14,6 @@ st.set_page_config(
 # Custom premium styling
 st.markdown("""
 <style>
-    /* Styling variables and fonts */
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
     
     * {
@@ -30,27 +32,26 @@ st.markdown("""
     
     .subtitle-text {
         font-size: 1.1rem;
-        color: #64748B;
+        color: #94A3B8;
         margin-bottom: 2rem;
     }
     
-    .week-card {
+    .card {
         background: #1E293B;
         border: 1px solid #334155;
         border-radius: 16px;
         padding: 1.8rem;
         margin-bottom: 1.5rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
     }
     
-    .week-card:hover {
-        transform: translateY(-2px);
-        border-color: #0D9488;
-        box-shadow: 0 12px 20px -8px rgba(13, 148, 136, 0.3);
+    .card:hover {
+        border-color: #38BDF8;
+        box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.2);
     }
     
-    .week-header {
+    .card-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -59,48 +60,36 @@ st.markdown("""
         margin-bottom: 1.2rem;
     }
     
-    .week-title {
+    .card-title {
         font-family: 'Outfit', sans-serif;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: 700;
         color: #F8FAFC;
     }
     
-    .hours-badge {
-        background: rgba(13, 148, 136, 0.15);
-        color: #2DD4BF;
-        border: 1px solid rgba(13, 148, 136, 0.3);
+    .badge {
+        background: rgba(56, 189, 248, 0.15);
+        color: #38BDF8;
+        border: 1px solid rgba(56, 189, 248, 0.3);
         padding: 0.25rem 0.75rem;
         border-radius: 9999px;
         font-size: 0.85rem;
         font-weight: 600;
     }
     
-    .topic-list {
-        margin: 0;
-        padding-left: 1.2rem;
-    }
-    
-    .topic-item {
-        color: #E2E8F0;
-        font-size: 1.05rem;
-        margin-bottom: 0.6rem;
-        line-height: 1.5;
-    }
-    
-    .sidebar-info {
-        background: #0F172A;
-        border: 1px solid #1E293B;
-        border-radius: 12px;
+    .interactive-header {
+        background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+        border-left: 5px solid #0D9488;
         padding: 1.2rem;
-        margin-top: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# Main Application Title & Subtitle
+# Main Application Header
 st.markdown('<div class="title-text">🎓 Management of Technology (MOT)</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle-text">Curriculum Lesson Plan for the MBA (Business Administration) Track</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle-text">Interactive Lesson Plan Portal — MBA Curriculum Integration</div>', unsafe_allow_html=True)
 
 # Sidebar with general info
 with st.sidebar:
@@ -108,21 +97,22 @@ with st.sidebar:
     st.markdown("""
     **Track:** MBA (Business Administration)  
     **Course:** Management of Technology (MOT)  
-    **Structure:** 7 Combined Sessions (6 Hours per Session / Week)  
-    **Total Scope:** 13 Weeks of Core Syllabus  
+    **Lecturer:** Mr. Irfan  
+    **Framework:** Post-War Kingdom Case Study  
     """)
     
     st.markdown("---")
-    st.markdown("### 📊 Learning Framework")
-    st.markdown("""
-    This digital portal maps out key systems theories, requirement strategies, software lifecycles, and governance paradigms essential for technology managers.
-    """)
+    st.markdown("### 🧭 Interactive Widgets")
+    track_select = st.selectbox(
+        "Current Student Track Mode:",
+        ["👔 MBA Executive Focus", "🖥️ BSc Computer Science / IT Mode", "📊 BSc Accounts Mode"]
+    )
     
     st.markdown("---")
-    st.markdown("### 🎯 Syllabus Coverage")
-    coverage = st.slider("Select progress made:", 0, 100, 0)
-    st.progress(coverage / 100)
-    st.caption(f"{coverage}% of curriculum covered")
+    st.markdown("### 📈 Course Progress")
+    progress = st.slider("Mark Syllabus Completed (%):", 0, 100, 71)
+    st.progress(progress / 100)
+    st.caption(f"{progress}% of curriculum covered")
 
 # 7 Tabs matching combined Weeks
 tab_titles = [
@@ -137,219 +127,402 @@ tab_titles = [
 
 tabs = st.tabs(tab_titles)
 
-# Content mapping for the sessions
-sessions_data = {
-    0: {
-        "title": "Systems Thinking & Tech Strategy",
-        "weeks": [
-            {
-                "num": "Week 1",
-                "focus": "Understanding Systems Theories & Decisional Contexts",
-                "topics": [
-                    "Understanding systems theories",
-                    "Control systems & organizational systems thinking",
-                    "Feedback and control in management systems",
-                    "Digital systems in organizations",
-                    "Information as a strategic asset",
-                    "Role of managers in digital decision environments"
-                ]
-            },
-            {
-                "num": "Week 2",
-                "focus": "Digital Strategy & Technology Management Planning",
-                "topics": [
-                    "Developing a technology management plan",
-                    "Digital strategy planning",
-                    "Business capability and organizational needs alignment",
-                    "Human-centered requirements engineering",
-                    "Data-driven requirement gathering",
-                    "Stakeholder involvement in technology planning"
-                ]
-            }
-        ]
-    },
-    1: {
-        "title": "Business Systems Design & Governance",
-        "weeks": [
-            {
-                "num": "Week 3",
-                "focus": "System Design Methodologies & Strategy Roadmaps",
-                "topics": [
-                    "System design methodologies & principle models",
-                    "Business system design approaches",
-                    "Enterprise systems (conceptual frameworks)",
-                    "Business problem analysis prior to technology selection",
-                    "Digital transformation roadmap design"
-                ]
-            },
-            {
-                "num": "Week 4",
-                "focus": "Digital Regulation, Ethics & Workplace Compliance",
-                "topics": [
-                    "Data Protection Act provisions",
-                    "Computer ethics & data protection/privacy standards",
-                    "Digital ethics & regulatory frameworks",
-                    "Legal and ethical decision-making matrix",
-                    "Workplace monitoring policies & best practices",
-                    "AI ethics awareness in enterprise administration"
-                ]
-            }
-        ]
-    },
-    2: {
-        "title": "SDLC Models & Business Integration",
-        "weeks": [
-            {
-                "num": "Week 5",
-                "focus": "Software Development Life Cycles (SDLC)",
-                "topics": [
-                    "System development lifecycle concepts",
-                    "Various SDLC models & key benefits",
-                    "Importance of adopting structured SDLC paths",
-                    "SDLC as a framework for management processes",
-                    "Waterfall model (strengths & limitations)",
-                    "Prototyping model (strengths & limitations)",
-                    "Introduction to agile thinking and methodologies"
-                ]
-            },
-            {
-                "num": "Week 6",
-                "focus": "Frameworks & Integrated Processing",
-                "topics": [
-                    "Understanding computer systems concepts and methods",
-                    "IT frameworks & decision frameworks",
-                    "Business-technology integration & alignment",
-                    "Technology management frameworks",
-                    "Digital transformation planning",
-                    "Transaction processing concepts"
-                ]
-            }
-        ]
-    },
-    3: {
-        "title": "Infrastructure, Trends & Integration",
-        "weeks": [
-            {
-                "num": "Week 7",
-                "focus": "Systems Concepts & Digital Transformation Planning",
-                "topics": [
-                    "Understanding computer systems concepts and methods",
-                    "IT frameworks & decision frameworks",
-                    "Business-technology integration & alignment",
-                    "Technology management frameworks",
-                    "Digital transformation planning",
-                    "Transaction processing concepts"
-                ]
-            },
-            {
-                "num": "Week 8",
-                "focus": "Infrastructure, Platforms & Legislative Shifts",
-                "topics": [
-                    "Legislative and industry trends",
-                    "Semiconductor industry trends & resource shifts",
-                    "Digital platforms & cloud infrastructure",
-                    "Telecom regulation & network ecosystems",
-                    "Industry transformation dynamics",
-                    "Local vs. long-distance considerations"
-                ]
-            }
-        ]
-    },
-    4: {
-        "title": "Portfolio Governance & Application Management",
-        "weeks": [
-            {
-                "num": "Week 9",
-                "focus": "Managing Application Portfolios",
-                "topics": [
-                    "Managing application portfolios (APM)",
-                    "Lifecycle analysis & technological obsolescence",
-                    "Maintenance and enhancements strategy",
-                    "Programming backlog management",
-                    "Prioritization methodologies & cost of change estimation",
-                    "Governance frameworks vs. typical ad hoc processes"
-                ]
-            },
-            {
-                "num": "Week 10",
-                "focus": "Application Development & Project Management",
-                "topics": [
-                    "Managing application development",
-                    "Agile project management concepts",
-                    "Business case development for software systems",
-                    "Stage-gate review systems & risk analysis",
-                    "Programming process improvements",
-                    "Successful application management keys"
-                ]
-            }
-        ]
-    },
-    5: {
-        "title": "Development Alternatives & E-Business Systems",
-        "weeks": [
-            {
-                "num": "Week 11",
-                "focus": "System Development & Acquisition Alternatives",
-                "topics": [
-                    "Development and acquisition alternatives",
-                    "System development approaches",
-                    "Outsourcing strategies",
-                    "Buy vs. Build decisions",
-                    "SaaS (Software-as-a-Service) vs. custom system design",
-                    "Acquisition strategies & vendor assessment"
-                ]
-            },
-            {
-                "num": "Week 12",
-                "focus": "E-Business Infrastructure & Cloud Governance",
-                "topics": [
-                    "Managing e-business applications",
-                    "Digital ecosystems & Intranets/Extranets",
-                    "Management issues in distributed environments",
-                    "E-business systems planning",
-                    "Cloud governance, change management & continuity planning"
-                ]
-            }
-        ]
-    },
-    6: {
-        "title": "Continuity & Enterprise Ecosystems",
-        "weeks": [
-            {
-                "num": "Week 13",
-                "focus": "E-Business Systems & Change Management",
-                "topics": [
-                    "Managing e-business applications",
-                    "Digital ecosystems & Intranets/Extranets",
-                    "Management issues in distributed environments",
-                    "E-business systems planning",
-                    "Cloud governance, change management & continuity planning"
-                ]
-            }
-        ]
-    }
-}
-
-# Render each tab
-for tab_id, data in sessions_data.items():
-    with tabs[tab_id]:
-        st.subheader(data["title"])
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 1: WEEK 1 & WEEK 2 (SYSTEMS THINKING & REQUIREMENTS)
+# ─────────────────────────────────────────────────────────────────────────────
+with tabs[0]:
+    st.markdown('<div class="interactive-header"><h3>⚡ Systems Perspective & Requirement Engineering</h3></div>', unsafe_allow_html=True)
+    
+    col_l, col_r = st.columns([1, 1])
+    
+    with col_l:
+        st.subheader("📚 Slide Curriculum Contents")
         
-        # Display each week in this session
-        for week in data["weeks"]:
-            st.markdown(f"""
-            <div class="week-card">
-                <div class="week-header">
-                    <span class="week-title">📅 {week['num']} — {week['focus']}</span>
-                    <span class="hours-badge">3 Hours</span>
-                </div>
-            <ul class="topic-list">
-            """, unsafe_allow_html=True)
-            
-            for topic in week["topics"]:
-                st.markdown(f'<li class="topic-item">🔹 {topic}</li>', unsafe_allow_html=True)
-                
+        with st.expander("📖 Week 1: Systems Thinking & Feedback Loops", expanded=True):
             st.markdown("""
-            </ul>
-            </div>
-            """, unsafe_allow_html=True)
+            **The Systems Perspective**
+            Organizations are interconnected webs. Managers must understand system functions and workflows before applying technology.
+            
+            **System Characteristics:**
+            - **Components:** People, Process, Tech, Info, Governance.
+            - **Relationships:** Workflows and connections.
+            - **Boundaries:** Internal control vs. external parameters.
+            - **Goals:** The unified objective components work toward.
+            
+            **Feedback Loops:**
+            - *Positive (Reinforcing):* Drives growth (e.g. viral network adoption) or runaway panic.
+            - *Negative (Balancing):* Corrects errors, maintaining stability (e.g. thermostat, inventory thresholds).
+            """)
+            
+        with st.expander("📖 Week 2: Technology Planning & Requirements Analysis", expanded=False):
+            st.markdown("""
+            **Technology Management Planning**
+            - Focus on solving real business problems, not chasing tech hype.
+            - Avoid *Tech-First Thinking* (selecting tools before problems are scoped).
+            
+            **Syllabus Requirements Categories:**
+            - **Functional:** *What* the system does (e.g. log transactions, track resources).
+            - **Non-Functional:** *How* it performs (e.g. reliability, security, scalability).
+            - **Human-Centered:** Simplicity, accessibility, and trust.
+            """)
+            
+    with col_r:
+        st.subheader("🎮 Interactive Sandbox: Feedback Loops & Trade Requirements")
+        
+        # Sandbox 1: Panic Buying Reinforcing Loop
+        st.markdown("#### 🔄 Simulator: Panic Buying Reinforcing Loop")
+        st.write("Simulate how positive feedback leads to system collapse, and how negative control loops restore balance.")
+        
+        loop_type = st.selectbox("Apply Stabilization Policy (Negative Loop):", ["None (Runaway Panic)", "Rationing Rules (Cap allocations)", "Price Ceiling Controls"])
+        initial_panic = st.slider("Initial System Panic Level:", 1, 10, 3)
+        
+        panic = initial_panic
+        stock = 100
+        history = []
+        
+        for step in range(1, 6):
+            if loop_type == "None (Runaway Panic)":
+                demand = panic * 8
+                panic += 2
+            elif loop_type == "Rationing Rules (Cap allocations)":
+                demand = min(panic * 3, 15)
+                panic = max(1, panic - 1)
+            else: # Price Ceiling
+                demand = panic * 5
+                panic = max(1, panic - 0.5)
+                
+            stock = max(0, stock - demand)
+            history.append({"Day": f"Day {step}", "Stock Reserves": stock, "Panic Level": panic})
+            
+        df_hist = pd.DataFrame(history)
+        st.line_chart(df_hist.set_index("Day"))
+        
+        if stock == 0:
+            st.error("🚨 System Failure: Food/Resource stock depleted due to runaway buying loop!")
+        else:
+            st.success("✅ System Stabilized: Reserves maintained through the balancing feedback loop.")
+            
+        st.markdown("---")
+        
+        # Sandbox 2: Requirements Classifier
+        st.markdown("#### 📝 Lab: Requirements Classification Matrix")
+        st.write("Drag/categorize the trade system requirements based on class definitions:")
+        
+        req_item = st.selectbox("Select Requirement Item to Classify:", [
+            "1. Clerk must record every grain allocation.",
+            "2. Access tokens must be encrypted.",
+            "3. Ledger must support 10,000 active users.",
+            "4. Portal screen must load in under 2 seconds.",
+            "5. Ledger must be readable by local supervisors."
+        ])
+        
+        user_class = st.radio("Choose correct category:", ["Functional Requirement", "Non-Functional: Security/Performance", "Human-Centered Design"])
+        
+        if "record every" in req_item and user_class == "Functional Requirement":
+            st.success("🎯 Correct! Defining WHAT the system must do.")
+        elif ("encrypted" in req_item or "active users" in req_item or "2 seconds" in req_item) and user_class == "Non-Functional: Security/Performance":
+            st.success("🎯 Correct! Specifying operational quality/constraint.")
+        elif "readable" in req_item and user_class == "Human-Centered Design":
+            st.success("🎯 Correct! Ensuring usability and trust.")
+        else:
+            st.info("Try to categorize based on Slide 15-17 theory.")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 2: WEEK 3 & WEEK 4 (SYSTEM DESIGN & ETHICS)
+# ─────────────────────────────────────────────────────────────────────────────
+with tabs[1]:
+    st.markdown('<div class="interactive-header"><h3>⚡ Business Systems Design & Ethical Governance</h3></div>', unsafe_allow_html=True)
+    
+    col_l, col_r = st.columns([1, 1])
+    
+    with col_l:
+        st.subheader("📚 Slide Curriculum Contents")
+        
+        with st.expander("📖 Week 3: Systems Design & Problem Analysis", expanded=True):
+            st.markdown("""
+            **What is System Design?**
+            - Transforms requirements into implementable blueprints.
+            - **Conceptual Design:** Focuses on purpose, workflows, and relationship rules. (Manager-facing).
+            - **Technical Design:** Focuses on database schema, APIs, and code structure. (Developer-facing).
+            
+            **Digital Transformation Roadmap Stages:**
+            1. Manual Operations (paper-based)
+            2. Organized Processes (standard operating procedures)
+            3. Digital Records (databases/ledgers)
+            4. Integrated Systems (connected departments)
+            5. Intelligent Systems (analytics and AI support)
+            """)
+            
+        with st.expander("📖 Week 4: Information Ethics, Data Protection & AI Support", expanded=False):
+            st.markdown("""
+            **Syllabus Ethics Guidelines:**
+            - **Data Protection:** Safeguarding credentials, identity logs, and financial balances.
+            - **AI and DSS:** Decisional assistants spot trends, but humans remain fully accountable.
+            
+            **The Ethical Checklist for Managers:**
+            1. *Is it legal?* (Compliance)
+            2. *Is it fair?* (Equity)
+            3. *Is it necessary?* (Purpose & Scale)
+            4. *What are the consequences?* (Risk/Benefit analysis)
+            """)
+            
+    with col_r:
+        st.subheader("🎮 Interactive Sandbox: Ethical Governance & AI Decision Maker")
+        
+        # Sandbox 1: Ethical Risk Evaluator
+        st.markdown("#### ⚖️ Manager Tool: Ethical Assessment Matrix")
+        st.write("Run a proposed technology deployment through the 4-Question Ethical Checklist.")
+        
+        proposal = st.selectbox("Proposed Deployment Scenario:", [
+            "Workplace biometric scans to access trade ledgers",
+            "AI automated rationing based on biometric data",
+            "Public community trade logging board"
+        ])
+        
+        q1 = st.checkbox("Q1: Is it compliant with local privacy laws/guidelines?")
+        q2 = st.checkbox("Q2: Is it fair and free from system bias?")
+        q3 = st.checkbox("Q3: Is this the minimum intrusion necessary to solve the problem?")
+        q4 = st.checkbox("Q4: Do benefits outweigh long-term tracking risks?")
+        
+        score = sum([q1, q2, q3, q4])
+        st.metric(label="Ethical Alignment Score", value=f"{score} / 4")
+        
+        if score == 4:
+            st.success("🚀 Proposal APPROVED. Fully compliant with managerial ethics guidelines.")
+        elif score >= 2:
+            st.warning("⚠️ Revision needed. Integrate safeguards or reduce data scope.")
+        else:
+            st.error("❌ Proposal REJECTED. High ethical risk. Redesign system rules.")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 3: WEEK 5 & WEEK 6 (SDLC & EXECUTION)
+# ─────────────────────────────────────────────────────────────────────────────
+with tabs[2]:
+    st.markdown('<div class="interactive-header"><h3>⚡ Systems Development Life Cycle (SDLC) & Execution</h3></div>', unsafe_allow_html=True)
+    
+    col_l, col_r = st.columns([1, 1])
+    
+    with col_l:
+        st.subheader("📚 Slide Curriculum Contents")
+        
+        with st.expander("📖 Week 5: SDLC Models & Suitability", expanded=True):
+            st.markdown("""
+            **System Development Life Cycle (SDLC)**
+            Structured approach to plan, design, build, test, and maintain enterprise information networks.
+            
+            **Syllabus SDLC Models:**
+            - **Waterfall Model:** Sequential, documentation-driven. Ideal for fixed regulations, stable currencies, and well-understood systems.
+            - **Spiral Model:** Iterative, focusing on risk analysis. Ideal for highly complex, high-risk systems.
+            - **Prototyping Model:** Rapid build-and-learn cycle. Ideal for experimental features with unclear requirements.
+            - **Agile Model:** Highly flexible, user-feedback loop driven. Ideal for fast-changing requirements.
+            """)
+            
+        with st.expander("📖 Week 6: IT Frameworks, TPS & DIKW Hierarchy", expanded=False):
+            st.markdown("""
+            **Information Processing Stack:**
+            - **TPS (Transaction Processing Systems):** Records routine daily activities.
+            - **DSS (Decision Support Systems):** Evaluates alternatives using TPS data.
+            
+            **The DIKW Hierarchy:**
+            1. **Data:** Raw transactional facts (e.g. "Clerk logs 10 kg").
+            2. **Information:** Structured reports (e.g. "Monthly grain storage trends").
+            3. **Knowledge:** Actionable relationships (e.g. "Rain failure triggers 15% drop").
+            4. **Wisdom:** Strategic management rules (e.g. "Enact emergency distribution").
+            """)
+            
+    with col_r:
+        st.subheader("🎮 Interactive Sandbox: SDLC Model Matcher & DIKW Builder")
+        
+        # Sandbox 1: SDLC Selector
+        st.markdown("#### 🎯 Decision Tool: SDLC Suitability Matrix")
+        st.write("Input your project parameters to identify the best lifecycle model.")
+        
+        req_stability = st.radio("Requirement Stability:", ["Completely Fixed & Policy-governed", "Iterative/Requires User Feedback", "Highly Uncertain & Risky"])
+        time_limit = st.selectbox("Timeline Pressure:", ["Generous/Quality-focused", "Extremely urgent/Need immediate working prototype"])
+        
+        if req_stability == "Completely Fixed & Policy-governed" and time_limit == "Generous/Quality-focused":
+            st.success("💡 Recommendation: **Waterfall Model**. Document-driven, highly structured, stable.")
+        elif req_stability == "Iterative/Requires User Feedback" or time_limit == "Extremely urgent/Need immediate working prototype":
+            st.success("💡 Recommendation: **Prototyping / Agile Model**. Rapid validation prevents user rejection.")
+        else:
+            st.success("💡 Recommendation: **Spiral Model**. Iterative risk audits manage complexity.")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 4: WEEK 7 & WEEK 8 (HARDWARE & SEMICONDUCTORS)
+# ─────────────────────────────────────────────────────────────────────────────
+with tabs[3]:
+    st.markdown('<div class="interactive-header"><h3>⚡ Semiconductors, Digital Stack & Platforms</h3></div>', unsafe_allow_html=True)
+    
+    col_l, col_r = st.columns([1, 1])
+    
+    with col_l:
+        st.subheader("📚 Slide Curriculum Contents")
+        
+        with st.expander("📖 Week 8: Semiconductors, Platforms & Cloud Stack", expanded=True):
+            st.markdown("""
+            **The Digital & Hardware Stack**
+            1. **Applications (SaaS):** Frontend tools (e.g. Salesforce, Slack).
+            2. **Cloud Infrastructure (IaaS/PaaS):** Compute/storage layers (AWS, Azure, GCP).
+            3. **Telecommunication Networks:** 5G, fiber, satellite data relays.
+            4. **Semiconductors (Chips):** Silicon CPUs, GPUs, memory. (The foundation).
+            
+            **Semiconductor Industry Dynamics:**
+            - Chips power all modern computing infrastructure.
+            - Silicon is the fundamental element (semi-conductor of electrical currents).
+            - Key Players: Nvidia (GPU/AI), Intel (CPU), TSMC (Fabrication).
+            
+            **Telecom Regulations:**
+            - Allocating radio bandwidth channels.
+            - Local vs long-distance transmission limits.
+            """)
+            
+    with col_r:
+        st.subheader("🎮 Interactive Sandbox: Hardware-Cloud Stack Architect")
+        
+        st.markdown("#### ⚙️ Lab: Digital Stack Cost & Performance Builder")
+        st.write("Configure the hardware/cloud layers for a company and review system capacity.")
+        
+        chip_tier = st.selectbox("Processor Chipset Tier:", ["Standard Core CPU (Low Overhead)", "Enterprise AI GPU/TPU (High performance)"])
+        cloud_service = st.radio("Cloud Hosting Strategy:", ["IaaS (EC2/Azure VMs - Complete control)", "SaaS (Fully managed cloud services)"])
+        user_scale = st.number_input("Target Monthly Active Users:", min_value=100, max_value=1000000, value=50000)
+        
+        # Capacity logic
+        if chip_tier == "Standard Core CPU (Low Overhead)" and user_scale > 100000:
+            st.error("⚠️ Chip bottlenecks detected! Standard CPUs cannot handle the query volume.")
+        else:
+            st.success("🚀 Stack configuration validated. Compute resources are balanced.")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 5: WEEK 9 & WEEK 10 (PORTFOLIO GOVERNANCE)
+# ─────────────────────────────────────────────────────────────────────────────
+with tabs[4]:
+    st.markdown('<div class="interactive-header"><h3>⚡ Application Portfolio Management (APM) & Backlogs</h3></div>', unsafe_allow_html=True)
+    
+    col_l, col_r = st.columns([1, 1])
+    
+    with col_l:
+        st.subheader("📚 Slide Curriculum Contents")
+        
+        with st.expander("📖 Week 9 & 10: APM, Prioritization & Backlog Management", expanded=True):
+            st.markdown("""
+            **Application Portfolio Management (APM)**
+            Managers systematically classify software assets to optimize maintenance, upgrade pathways, or retire obsolete systems.
+            
+            **Key Decisions:**
+            - **Maintenance vs Enhancement:** Patching bugs vs building new features.
+            - **Cost of Change:** Changes late in the SDLC cost significantly more than early design adjustments.
+            - **Governance:** Avoiding ad-hoc requests by prioritizing items using business case metrics.
+            """)
+            
+    with col_r:
+        st.subheader("🎮 Interactive Sandbox: Backlog Priority Matrix")
+        
+        st.markdown("#### 📊 Manager Tool: Strategic Backlog Prioritizer")
+        st.write("Evaluate backlog features using Strategic Importance and Cost of Change to allocate resources.")
+        
+        col_bl1, col_bl2 = st.columns(2)
+        with col_bl1:
+            benefit = st.slider("Strategic Business Importance (1-10):", 1, 10, 8)
+        with col_bl2:
+            cost = st.slider("Development Cost / Complexity (1-10):", 1, 10, 3)
+            
+        priority = benefit - cost
+        st.metric(label="Calculated Priority Score", value=priority)
+        
+        if priority >= 5:
+            st.success("🔥 Priority: **High**. Schedule for the next development sprint.")
+        elif priority >= 1:
+            st.info("⚡ Priority: **Medium**. Keep in backlog for future sprint cycles.")
+        else:
+            st.warning("💤 Priority: **Low / Defer**. Resource investment does not align with business value.")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 6: WEEK 11 & WEEK 12 (ACQUISITION & E-BUSINESS)
+# ─────────────────────────────────────────────────────────────────────────────
+with tabs[5]:
+    st.markdown('<div class="interactive-header"><h3>⚡ System Acquisition & E-Business Systems</h3></div>', unsafe_allow_html=True)
+    
+    col_l, col_r = st.columns([1, 1])
+    
+    with col_l:
+        st.subheader("📚 Slide Curriculum Contents")
+        
+        with st.expander("📖 Week 11 & 12: Buy vs Build & Network Zonation", expanded=True):
+            st.markdown("""
+            **System Acquisition Alternatives**
+            - **Outsourcing:** Transferring development/operations to external partners.
+            - **Buy vs. Build:**
+              - *Buy (SaaS):* Fast rollout, predictable license costs, vendor lock-in risk.
+              - *Build (Custom):* High upfront CapEx, competitive differentiation, custom fit.
+              
+            **Intranets vs Extranets:**
+            - **Intranet:** Internal private corporate network. High security restrictions.
+            - **Extranet:** Shared network zone extending database access to partners/suppliers.
+            """)
+            
+    with col_r:
+        st.subheader("🎮 Interactive Sandbox: Buy vs Build Decision Grid")
+        
+        st.markdown("#### ⚖️ Manager Tool: Acquisition Selection matrix")
+        st.write("Select the option matching your organizational constraints:")
+        
+        has_devs = st.checkbox("Company has an experienced internal software development team?")
+        need_differentiation = st.checkbox("This application is the primary source of competitive advantage?")
+        tight_timeline = st.checkbox("Timeline is extremely critical (Must launch in 30 days)?")
+        
+        if tight_timeline:
+            st.success("💡 Verdict: **Buy SaaS Product**. Custom build takes too long; launch using pre-existing code.")
+        elif has_devs and need_differentiation:
+            st.success("💡 Verdict: **Build Custom System**. Maintain strategic control and IP value.")
+        else:
+            st.info("💡 Verdict: **Buy and Customize**. Leverage standard software, customizing workflows.")
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TAB 7: WEEK 13 (CHANGE MANAGEMENT & CONTINUITY)
+# ─────────────────────────────────────────────────────────────────────────────
+with tabs[6]:
+    st.markdown('<div class="interactive-header"><h3>⚡ Change Management & Business Continuity Planning (BCP)</h3></div>', unsafe_allow_html=True)
+    
+    col_l, col_r = st.columns([1, 1])
+    
+    with col_l:
+        st.subheader("📚 Slide Curriculum Contents")
+        
+        with st.expander("📖 Week 13: BCP, Change Management & Resilience", expanded=True):
+            st.markdown("""
+            **Business Continuity Planning (BCP)**
+            - Proactive planning to maintain operations in crisis.
+            - **RTO (Recovery Time Objective):** Max acceptable downtime before recovery.
+            - **RPO (Recovery Point Objective):** Max acceptable data loss interval.
+            
+            **Change Management Frameworks:**
+            - Managing user anxiety, training, and operational transitions during new software rollouts.
+            """)
+            
+    with col_r:
+        st.subheader("🎮 Interactive Sandbox: RTO / RPO Cost Optimizer")
+        
+        st.markdown("#### 🚨 BCP Tool: Disaster Continuity Planner")
+        st.write("Balance backup cost against potential data recovery losses to optimize BCP investments.")
+        
+        backup_frequency = st.selectbox("Select Backup Frequency:", ["Hourly", "Daily", "Weekly"])
+        hosting_tiers = st.radio("Redundancy Zones:", ["Single Datacenter (Low cost)", "Multi-Region Cloud (High cost)"])
+        
+        # Cost math
+        if backup_frequency == "Hourly":
+            rpo_loss = 1.0 # hour
+            backup_cost = 5000
+        elif backup_frequency == "Daily":
+            rpo_loss = 24.0 # hours
+            backup_cost = 1000
+        else:
+            rpo_loss = 168.0 # hours (weekly)
+            backup_cost = 200
+            
+        rto_downtime = 2.0 if "Multi-Region" in hosting_tiers else 24.0
+        infra_cost = 4000 if "Multi-Region" in hosting_tiers else 500
+        
+        st.write(f"**Calculated Metrics:**")
+        st.write(f"▸ RPO Data Loss Risk: **{rpo_loss} Hours**")
+        st.write(f"▸ RTO Recovery Downtime: **{rto_downtime} Hours**")
+        st.metric(label="Total BCP Infrastructure Cost ($/year)", value=f"${backup_cost + infra_cost}")
