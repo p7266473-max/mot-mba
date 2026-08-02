@@ -2,94 +2,50 @@ import streamlit as st
 
 st.markdown("""
 <style>
-#MainMenu {visibility: hidden; display: none !important;}
-header {visibility: hidden; display: none !important;}
-footer {visibility: hidden; display: none !important;}
-[data-testid="stHeader"] {visibility: hidden; display: none !important;}
-[data-testid="stFooter"] {visibility: hidden; display: none !important;}
-[data-testid="stToolbar"] {visibility: hidden; display: none !important;}
-[data-testid="stDecoration"] {visibility: hidden; display: none !important;}
-[data-testid="stStatusWidget"] {visibility: hidden; display: none !important;}
-.stAppDeployButton {display: none !important;}
-#stDecoration {display: none !important;}
+/* Hide Streamlit top header, toolbar, GitHub fork badges, menu, and decoration */
+#MainMenu {visibility: hidden !important; display: none !important;}
+header {visibility: hidden !important; display: none !important;}
+[data-testid="stHeader"] {visibility: hidden !important; display: none !important;}
+[data-testid="stToolbar"] {visibility: hidden !important; display: none !important;}
+[data-testid="stDecoration"] {visibility: hidden !important; display: none !important;}
+[data-testid="stStatusWidget"] {visibility: hidden !important; display: none !important;}
+.stAppDeployButton {visibility: hidden !important; display: none !important;}
+#stDecoration {visibility: hidden !important; display: none !important;}
+
+/* Hide Streamlit bottom footer and bottom-right viewer/host badges */
+footer {visibility: hidden !important; display: none !important;}
+[data-testid="stFooter"] {visibility: hidden !important; display: none !important;}
+.viewerBadge_container__16g3m {visibility: hidden !important; display: none !important;}
+[class*="viewerBadge"] {visibility: hidden !important; display: none !important;}
+[class*="styles_viewerBadge"] {visibility: hidden !important; display: none !important;}
+[class*="ViewerBadge"] {visibility: hidden !important; display: none !important;}
+.stActionButton {visibility: hidden !important; display: none !important;}
 </style>
 """, unsafe_allow_html=True)
 
 def inject_custom_css():
     st.markdown("""
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        
-        * {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        
-        .title-text {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #0D9488 0%, #38BDF8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-        
-        .subtitle-text {
-            font-size: 1.1rem;
-            color: #94A3B8;
-            margin-bottom: 2rem;
-        }
-        
-        .card {
-            background: #1E293B;
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 1.8rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover {
-            border-color: #38BDF8;
-            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.2);
-        }
-        
-        .card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 0.8rem;
-            margin-bottom: 1.2rem;
-        }
-        
-        .card-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #F8FAFC;
-        }
-        
-        .badge {
-            background: rgba(56, 189, 248, 0.15);
-            color: #38BDF8;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        .interactive-header {
-            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-            border-left: 5px solid #0D9488;
-            padding: 1.2rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-    </style>
-    """, unsafe_allow_html=True)
+<style>
+/* Hide Streamlit top header, toolbar, GitHub fork badges, menu, and decoration */
+#MainMenu {visibility: hidden !important; display: none !important;}
+header {visibility: hidden !important; display: none !important;}
+[data-testid="stHeader"] {visibility: hidden !important; display: none !important;}
+[data-testid="stToolbar"] {visibility: hidden !important; display: none !important;}
+[data-testid="stDecoration"] {visibility: hidden !important; display: none !important;}
+[data-testid="stStatusWidget"] {visibility: hidden !important; display: none !important;}
+.stAppDeployButton {visibility: hidden !important; display: none !important;}
+#stDecoration {visibility: hidden !important; display: none !important;}
+
+/* Hide Streamlit bottom footer and bottom-right viewer/host badges */
+footer {visibility: hidden !important; display: none !important;}
+[data-testid="stFooter"] {visibility: hidden !important; display: none !important;}
+.viewerBadge_container__16g3m {visibility: hidden !important; display: none !important;}
+[class*="viewerBadge"] {visibility: hidden !important; display: none !important;}
+[class*="styles_viewerBadge"] {visibility: hidden !important; display: none !important;}
+[class*="ViewerBadge"] {visibility: hidden !important; display: none !important;}
+.stActionButton {visibility: hidden !important; display: none !important;}
+</style>
+""", unsafe_allow_html=True)
 
 def get_quiz_state(session_key, q_count):
     if "quiz_states" not in st.session_state:
