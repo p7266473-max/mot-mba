@@ -5,7 +5,6 @@ def main():
     pages_dir = os.path.join(base_dir, "pages")
     os.makedirs(pages_dir, exist_ok=True)
     
-    # 14 weekly pages
     week_titles = {
         1: "🔄 Week 1: Systems Thinking & Control Systems",
         2: "📋 Week 2: Tech Planning & Digital Strategy",
@@ -31,34 +30,34 @@ def main():
 
 import streamlit.components.v1 as components
 
-st.markdown("""
+st.markdown('''
 <style>
 /* Hide Streamlit top header, toolbar, GitHub fork badges, menu, and decoration */
-#MainMenu {visibility: hidden !important; display: none !important;}
-header {visibility: hidden !important; display: none !important;}
-[data-testid="stHeader"] {visibility: hidden !important; display: none !important;}
-[data-testid="stToolbar"] {visibility: hidden !important; display: none !important;}
-[data-testid="stDecoration"] {visibility: hidden !important; display: none !important;}
-[data-testid="stStatusWidget"] {visibility: hidden !important; display: none !important;}
-.stAppDeployButton {visibility: hidden !important; display: none !important;}
-#stDecoration {visibility: hidden !important; display: none !important;}
+#MainMenu {{visibility: hidden !important; display: none !important;}}
+header {{visibility: hidden !important; display: none !important;}}
+[data-testid="stHeader"] {{visibility: hidden !important; display: none !important;}}
+[data-testid="stToolbar"] {{visibility: hidden !important; display: none !important;}}
+[data-testid="stDecoration"] {{visibility: hidden !important; display: none !important;}}
+[data-testid="stStatusWidget"] {{visibility: hidden !important; display: none !important;}}
+.stAppDeployButton {{visibility: hidden !important; display: none !important;}}
+#stDecoration {{visibility: hidden !important; display: none !important;}}
 
 /* Hide Streamlit bottom footer, bottom container, and viewer/host badges */
-footer {visibility: hidden !important; display: none !important;}
-[data-testid="stFooter"] {visibility: hidden !important; display: none !important;}
-[data-testid="stBottom"] {visibility: hidden !important; display: none !important;}
-[data-testid="stBottomBlockContainer"] {visibility: hidden !important; display: none !important;}
-.viewerBadge_container__16g3m {visibility: hidden !important; display: none !important;}
-[class*="viewerBadge"] {visibility: hidden !important; display: none !important;}
-[class*="styles_viewerBadge"] {visibility: hidden !important; display: none !important;}
-[class*="ViewerBadge"] {visibility: hidden !important; display: none !important;}
-.stActionButton {visibility: hidden !important; display: none !important;}
+footer {{visibility: hidden !important; display: none !important;}}
+[data-testid="stFooter"] {{visibility: hidden !important; display: none !important;}}
+[data-testid="stBottom"] {{visibility: hidden !important; display: none !important;}}
+[data-testid="stBottomBlockContainer"] {{visibility: hidden !important; display: none !important;}}
+.viewerBadge_container__16g3m {{visibility: hidden !important; display: none !important;}}
+[class*="viewerBadge"] {{visibility: hidden !important; display: none !important;}}
+[class*="styles_viewerBadge"] {{visibility: hidden !important; display: none !important;}}
+[class*="ViewerBadge"] {{visibility: hidden !important; display: none !important;}}
+.stActionButton {{visibility: hidden !important; display: none !important;}}
 </style>
-""", unsafe_allow_html=True)
+''', unsafe_allow_html=True)
 
-components.html("""
+components.html('''
 <script>
-function cleanupStreamlitUI() {
+function cleanupStreamlitUI() {{
     const targetSelectors = [
         'footer', '[data-testid="stFooter"]', '[data-testid="stDecoration"]',
         '[data-testid="stStatusWidget"]', '[data-testid="stToolbar"]', '#MainMenu',
@@ -68,22 +67,22 @@ function cleanupStreamlitUI() {
         'button[title*="Streamlit"]', 'div[class*="StatusWidget"]'
     ];
 
-    [document, window.parent.document].forEach(doc => {
-        try {
-            targetSelectors.forEach(selector => {
-                doc.querySelectorAll(selector).forEach(el => {
+    [document, window.parent.document].forEach(doc => {{
+        try {{
+            targetSelectors.forEach(selector => {{
+                doc.querySelectorAll(selector).forEach(el => {{
                     el.style.setProperty('display', 'none', 'important');
                     el.style.setProperty('visibility', 'hidden', 'important');
                     el.style.setProperty('opacity', '0', 'important');
-                });
-            });
-        } catch (err) {}
-    });
-}
+                }});
+            }});
+        }} catch (err) {{}}
+    }});
+}}
 cleanupStreamlitUI();
 setInterval(cleanupStreamlitUI, 250);
 </script>
-""", height=0, width=0)
+''', height=0, width=0)
 import os
 from core.loader import load_week_questions
 from core.randomizer import get_random_sample
@@ -91,16 +90,12 @@ from core.quiz_engine import render_quiz_engine
 
 st.markdown("## {week_titles[week]}")
 
-# Construct path relative to repo root
 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Load all 25 questions
 all_questions = load_week_questions(base_path, {week})
 
 if not all_questions:
     st.error("Failed to load questions. Make sure the database exists.")
 else:
-    # Sample 15 questions randomly for this attempt and cache them in session state
     state_key = "sampled_questions_week{week:02d}"
     if state_key not in st.session_state:
         st.session_state[state_key] = get_random_sample(all_questions, 15)
@@ -114,7 +109,6 @@ else:
         with open(filepath, "w") as f:
             f.write(content)
             
-    # Save final_exam.py as 15_final_exam.py
     filename_exam = "15_final_exam.py"
     filepath_exam = os.path.join(pages_dir, filename_exam)
     
