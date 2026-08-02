@@ -1,5 +1,20 @@
 import streamlit as st
 
+st.markdown("""
+<style>
+#MainMenu {visibility: hidden; display: none !important;}
+header {visibility: hidden; display: none !important;}
+footer {visibility: hidden; display: none !important;}
+[data-testid="stHeader"] {visibility: hidden; display: none !important;}
+[data-testid="stFooter"] {visibility: hidden; display: none !important;}
+[data-testid="stToolbar"] {visibility: hidden; display: none !important;}
+[data-testid="stDecoration"] {visibility: hidden; display: none !important;}
+[data-testid="stStatusWidget"] {visibility: hidden; display: none !important;}
+.stAppDeployButton {display: none !important;}
+#stDecoration {display: none !important;}
+</style>
+""", unsafe_allow_html=True)
+
 def inject_custom_css():
     st.markdown("""
     <style>
